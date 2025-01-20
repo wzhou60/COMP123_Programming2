@@ -8,8 +8,8 @@
             //Console.WriteLine(bob.SayHi());
             //Console.WriteLine(bob);
 
-            Section section = new Section();
-            section.Name = "COMP123S1";
+            Section section = new Section() { Name = "COMP123S1" };
+            //section.Name = "COMP123S1"; // same as above but not as defensive
             section.Add(bob);
             section.Add(new Student(12346, "Joe", 2001, false));
             section.Add(new Student(12346, "Donald"));
