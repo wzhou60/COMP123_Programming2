@@ -1,0 +1,14 @@
+D:\School\COMP123_Programming2\Labs\Lab1\Lab1\Lab1\bin\Debug\net8.0\Lab1.exe
+D:\School\COMP123_Programming2\Labs\Lab1\Lab1\Lab1\bin\Debug\net8.0\Lab1.deps.json
+D:\School\COMP123_Programming2\Labs\Lab1\Lab1\Lab1\bin\Debug\net8.0\Lab1.runtimeconfig.json
+D:\School\COMP123_Programming2\Labs\Lab1\Lab1\Lab1\bin\Debug\net8.0\Lab1.dll
+D:\School\COMP123_Programming2\Labs\Lab1\Lab1\Lab1\bin\Debug\net8.0\Lab1.pdb
+D:\School\COMP123_Programming2\Labs\Lab1\Lab1\Lab1\obj\Debug\net8.0\Lab1.GeneratedMSBuildEditorConfig.editorconfig
+D:\School\COMP123_Programming2\Labs\Lab1\Lab1\Lab1\obj\Debug\net8.0\Lab1.AssemblyInfoInputs.cache
+D:\School\COMP123_Programming2\Labs\Lab1\Lab1\Lab1\obj\Debug\net8.0\Lab1.AssemblyInfo.cs
+D:\School\COMP123_Programming2\Labs\Lab1\Lab1\Lab1\obj\Debug\net8.0\Lab1.csproj.CoreCompileInputs.cache
+D:\School\COMP123_Programming2\Labs\Lab1\Lab1\Lab1\obj\Debug\net8.0\Lab1.dll
+D:\School\COMP123_Programming2\Labs\Lab1\Lab1\Lab1\obj\Debug\net8.0\refint\Lab1.dll
+D:\School\COMP123_Programming2\Labs\Lab1\Lab1\Lab1\obj\Debug\net8.0\Lab1.pdb
+D:\School\COMP123_Programming2\Labs\Lab1\Lab1\Lab1\obj\Debug\net8.0\Lab1.genruntimeconfig.cache
+D:\School\COMP123_Programming2\Labs\Lab1\Lab1\Lab1\obj\Debug\net8.0\ref\Lab1.dll
