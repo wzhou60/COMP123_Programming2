@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35527.113
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JsonApp", "W5C1\JsonApp.csproj", "{21AA2B76-9562-4B1F-8838-8B31DB33E4FA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JsonReadApp", "JsonReadApp\JsonReadApp.csproj", "{2D499C9C-2341-4F09-BD33-0C26E7341561}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inheritance-SchoolApp", "Inheritance-SchoolApp\Inheritance-SchoolApp.csproj", "{38368B99-F511-4C9A-A1D1-3FCCA883A190}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JsonNSApp", "JsonNSApp\JsonNSApp.csproj", "{4F2BCF02-6F6F-40C9-A5CE-7713ACA85033}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JsonNSRead", "JsonNSRead\JsonNSRead.csproj", "{95AE13A7-E30B-4BEB-AB6A-032DA0DF180E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{21AA2B76-9562-4B1F-8838-8B31DB33E4FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21AA2B76-9562-4B1F-8838-8B31DB33E4FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21AA2B76-9562-4B1F-8838-8B31DB33E4FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21AA2B76-9562-4B1F-8838-8B31DB33E4FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D499C9C-2341-4F09-BD33-0C26E7341561}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D499C9C-2341-4F09-BD33-0C26E7341561}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D499C9C-2341-4F09-BD33-0C26E7341561}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D499C9C-2341-4F09-BD33-0C26E7341561}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38368B99-F511-4C9A-A1D1-3FCCA883A190}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38368B99-F511-4C9A-A1D1-3FCCA883A190}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38368B99-F511-4C9A-A1D1-3FCCA883A190}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38368B99-F511-4C9A-A1D1-3FCCA883A190}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F2BCF02-6F6F-40C9-A5CE-7713ACA85033}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F2BCF02-6F6F-40C9-A5CE-7713ACA85033}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F2BCF02-6F6F-40C9-A5CE-7713ACA85033}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F2BCF02-6F6F-40C9-A5CE-7713ACA85033}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95AE13A7-E30B-4BEB-AB6A-032DA0DF180E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95AE13A7-E30B-4BEB-AB6A-032DA0DF180E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95AE13A7-E30B-4BEB-AB6A-032DA0DF180E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95AE13A7-E30B-4BEB-AB6A-032DA0DF180E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
