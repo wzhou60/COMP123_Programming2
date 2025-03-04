@@ -1,6 +1,4 @@
 ﻿//Jackie Zhou 301465524 Lab4/5
-using Microsoft.VisualBasic;
-
 namespace JackieZ_301465524_Lab45
 {
     class Task
@@ -22,7 +20,8 @@ namespace JackieZ_301465524_Lab45
 
         public Guid Id
         {
-          get; set;  
+            get;
+            private set;
         }
 
         public Task(string description)
