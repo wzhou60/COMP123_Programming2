@@ -13,10 +13,18 @@
             {
                 aNumber = Convert.ToInt32(userInput);
             }
-            catch (Exception)
+            //catch (Exception){ } // catch is top to bottom, exception on top makes the others obsolete 
+
+            catch (FormatException ex) //do code block if you get this object (exception)
             {
-                Console.WriteLine("An exception occured");
+                Console.WriteLine("An format exception occured");
+                //Console.WriteLine(ex.StackTrace);
             }
+            catch (OverflowException)
+            {
+                Console.WriteLine("An overflow exception occured");
+            }
+
             Console.WriteLine(userInput);
             Console.WriteLine(aNumber);
         }

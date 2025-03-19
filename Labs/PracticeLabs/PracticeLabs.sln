@@ -1,11 +1,19 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35527.113 d17.12
+VisualStudioVersion = 17.12.35527.113
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Time", "Time\Time.csproj", "{B23A59FC-ACF9-4C5C-AD61-30AC8DE4597B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Song", "Song\Song.csproj", "{C2A6FF91-7C4C-4B49-8FAB-DEDD8D7D9B17}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week_10_lab_17_gui_interface_shapes", "Week_10_lab_17_gui_interface_shapes\Week_10_lab_17_gui_interface_shapes.csproj", "{5FB7D3C1-E992-4A74-B662-78158A8C3DCD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTest1", "UnitTest1\UnitTest1.csproj", "{C57F511F-2B6C-4057-ACEB-DA38A3CAD6DF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestHello", "UnitTestHello\UnitTestHello.csproj", "{49F2BB10-2C7C-4EF9-96BE-6251D4A8CAC9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week_06_lab_16_Inheritance_Shapes_S", "Week_06_lab_16_Inheritance_Shapes_S\Week_06_lab_16_Inheritance_Shapes_S.csproj", "{E0250B7F-283C-4C72-BB31-C31CA972AA53}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +29,22 @@ Global
 		{C2A6FF91-7C4C-4B49-8FAB-DEDD8D7D9B17}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C2A6FF91-7C4C-4B49-8FAB-DEDD8D7D9B17}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C2A6FF91-7C4C-4B49-8FAB-DEDD8D7D9B17}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FB7D3C1-E992-4A74-B662-78158A8C3DCD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FB7D3C1-E992-4A74-B662-78158A8C3DCD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FB7D3C1-E992-4A74-B662-78158A8C3DCD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FB7D3C1-E992-4A74-B662-78158A8C3DCD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C57F511F-2B6C-4057-ACEB-DA38A3CAD6DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C57F511F-2B6C-4057-ACEB-DA38A3CAD6DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C57F511F-2B6C-4057-ACEB-DA38A3CAD6DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C57F511F-2B6C-4057-ACEB-DA38A3CAD6DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49F2BB10-2C7C-4EF9-96BE-6251D4A8CAC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49F2BB10-2C7C-4EF9-96BE-6251D4A8CAC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49F2BB10-2C7C-4EF9-96BE-6251D4A8CAC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49F2BB10-2C7C-4EF9-96BE-6251D4A8CAC9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0250B7F-283C-4C72-BB31-C31CA972AA53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0250B7F-283C-4C72-BB31-C31CA972AA53}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0250B7F-283C-4C72-BB31-C31CA972AA53}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0250B7F-283C-4C72-BB31-C31CA972AA53}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

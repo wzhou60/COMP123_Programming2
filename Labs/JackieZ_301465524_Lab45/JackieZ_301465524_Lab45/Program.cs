@@ -47,11 +47,13 @@ namespace JackieZ_301465524_Lab45
 
             Console.WriteLine("12. Add grade to the first assignment of the first course");
             course1.Evaluations[0].Grade = 90;
+
             Console.WriteLine("13. Write content of course manager to the console");
             Console.WriteLine(CourseManager.ToString());
 
             Console.WriteLine("14. Add grade to the second assignment of the first course ");
             course1.Evaluations[1].Grade = 100;
+
             Console.WriteLine("15. Write content of course manager to the console ");
             Console.WriteLine(CourseManager.ToString());
 
