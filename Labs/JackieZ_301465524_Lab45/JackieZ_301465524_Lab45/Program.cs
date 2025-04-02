@@ -104,7 +104,7 @@ namespace JackieZ_301465524_Lab45
             Console.WriteLine(CourseManager.ToString());
 
             Console.WriteLine("30. Write all tasks in the task manager to the console");
-            Console.WriteLine(TaskManager.AllTasksToString());
+            Console.WriteLine(TaskManager.AllTasksToString());  
         }
     }
 }

@@ -1,0 +1,161 @@
+0. Create instance of both TaskManager and CourseManager classes
+1. Create 2 courses
+2. Add courses to the course manager
+3. Write content of course manager to the console
+
+COMP123
+Evaluations:
+Total grade: 0
+COMP125
+Evaluations:
+Total grade: 0
+4. Add 2 assignments to the first course with due dates in 14 and 7 days respectively
+5. Add quiz, and test to the first course
+6. Add test to the first course
+7. Add 3 assignments to the second course with due dates in 10, 5, and 6 days respectively
+8. Trying to add assignment with a due date in the past
+Due date must be in the future.
+9. Trying to add assignment with a weight that exceeds total weight of 100% for all assignments
+Total evaluations weight exceeds 100%
+10. Trying to modify the weight of an assignment to exceeds total weight of 100% for all assignments
+Total evaluations weight exceeds 100%
+11. Add test to the first course
+12. Set TextFile for the first assignment of the first course to 'Evaluations\COMP123\Assignmnet1.txt'
+13. Write content of the evaluation text for the first assignment of the first course
+Start of evaluation text *******************************
+ Please observe the General assignment requirements
+Submission
+Submit your solution as compressed solution folder in Lab 1 drop box by the decline in the drop box.
+Creating a Car class
+A class is a self-contained piece of software that is able to function on its own.
+Write following class.
+Car
+Class
+Fields
+-       year                 : int
+-       manufacturer         : string
+-       model                : string
+-       isDrivable           : bool
+-       price                : double
+Methods
++       «constructor» Car(
+        year            : int,
+        manufacturer    : string,
+        model           : string,
+        price           : double,
+        isDrivable      : bool = true)
++       ToString()           : string
+
+Description of field members [20 Points]:
+1.      year: this private member represents the year value of this object
+2.      manufacturer: this private member represents the manufacturer of this car
+3.      model: this private member represents the model of this car
+4.      isDrivable: this private member indicates if this car be driven
+5.      price: this private member represents the selling price of this car
+Constructor [30 points]:
+1.      public Car(int year, string manufacturer, string model, double price, bool isDrivable = true): this is the constructor of this class. It takes five arguments and assigns them to the appropriate fields. You will assume that all the arguments will be sane (i.e. the values will not break your program).
+Description of action member [20 points]:
+1.      public override string ToString(): this method overrides the same method in the base class. It does not take any argument but it returns a string representing this object. You get to decide how the output will look like. It is expected that all the values be displayed.
+Test the class [30 points]:
+In your main method write the code to do the following:
+1.      Create at least four cars and print them. Remember to call the constructor with different number of parameters.
+
+
+14. Write content of course manager to the console
+
+COMP123
+Evaluations:
+        A1:Assignment:20%:2024-03-06:0
+        A2:Assignment:20%:2024-02-28:0
+        Q1:Quiz:20%:no due date:0:1 qustions
+        T1:Test:40%:no due date:0
+Total grade: 0
+COMP125
+Evaluations:
+        A1:Assignment:15%:2024-03-02:0
+        A2:Assignment:15%:2024-02-26:0
+        A3:Assignment:15%:2024-02-27:0
+        T1:Test:55%:no due date:0
+Total grade: 0
+15. Add grade to the first assignment of the first course
+16. Write content of course manager to the console
+
+COMP123
+Evaluations:
+        A1:Assignment:20%:2024-03-06:55
+        A2:Assignment:20%:2024-02-28:0
+        Q1:Quiz:20%:no due date:0:1 qustions
+        T1:Test:40%:no due date:0
+Total grade: 11
+COMP125
+Evaluations:
+        A1:Assignment:15%:2024-03-02:0
+        A2:Assignment:15%:2024-02-26:0
+        A3:Assignment:15%:2024-02-27:0
+        T1:Test:55%:no due date:0
+Total grade: 0
+17. Add grade to the second assignment of the first course
+17. Write content of course manager to the console
+
+COMP123
+Evaluations:
+        A1:Assignment:20%:2024-03-06:55
+        A2:Assignment:20%:2024-02-28:100
+        Q1:Quiz:20%:no due date:0:1 qustions
+        T1:Test:40%:no due date:0
+Total grade: 31
+COMP125
+Evaluations:
+        A1:Assignment:15%:2024-03-02:0
+        A2:Assignment:15%:2024-02-26:0
+        A3:Assignment:15%:2024-02-27:0
+        T1:Test:55%:no due date:0
+Total grade: 0
+19. Add task 'Read chapter 2' to the first course with due date in 6 days
+20. Add task 'Read chapter 3' to the first course
+21. Output tasks for the first course to the console
+(COMP123) all tasks:
+        Read chapter 2 due 2024-02-27 11:41:54 AM - Not done
+        Read chapter 3 - Not done
+
+22. Add task 'Start assignment' to the first assignment of the first course
+23. Add task 'Write main() method' to the first assignment of the first course and mark it done
+24. Output all task for the first evaluation of the first course to the console
+All tasks for  evaluation A2:
+        Start assignment due 2024-02-28 11:41:54 AM - Not done
+        Write main() method due 2024-02-28 11:41:54 AM - Done
+
+25. Create MyDay and add 2 tasks
+26. Output the MyDay to the console
+ My day February 21, 2024 all tasks:
+        Read chapter 2 due 2024-02-27 11:41:54 AM - Not done
+        Write main() method due 2024-02-28 11:41:54 AM - Done
+
+27. Create array of 2 IPersistable elements and add instances of class and task manager
+28. Persist all elements of the array using Save method
+29. Create instance of both TaskManager and CourseManager classes and add them to elements of the array
+30. Load all persisted content from a file in each element of the array
+31. Output a separator
+***************************************
+32. Write content of course manager to the console
+
+COMP123
+Evaluations:
+        A1:Assignment:20%:2024-03-06:55
+        A2:Assignment:20%:2024-02-28:100
+        Q1:Quiz:20%:no due date:0
+        T1:Test:40%:no due date:0
+Total grade: 31
+COMP125
+Evaluations:
+        A1:Assignment:15%:2024-03-02:0
+        A2:Assignment:15%:2024-02-26:0
+        A3:Assignment:15%:2024-02-27:0
+        T1:Test:55%:no due date:0
+Total grade: 0
+33. Write all tasks in the task manager to the console
+All tasks:
+        Read chapter 2 due 2024-02-27 11:41:54 AM - Not done
+        Read chapter 3 - Not done
+        Start assignment due 2024-02-28 11:41:54 AM - Not done
+        Write main() method due 2024-02-28 11:41:54 AM - Done

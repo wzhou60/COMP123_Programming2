@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35527.113
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JackieZ_Group3_Lab89", "JackieZ_Group3_Lab89\JackieZ_Group3_Lab89.csproj", "{F1E03E9F-12A7-4CD3-B403-D0CFB1702D13}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JackieZ_Group3_Lab89Library", "JackieZ_Group3_Lab89Library\JackieZ_Group3_Lab89Library.csproj", "{57239099-666A-4662-8334-E36424189F9A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F1E03E9F-12A7-4CD3-B403-D0CFB1702D13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1E03E9F-12A7-4CD3-B403-D0CFB1702D13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1E03E9F-12A7-4CD3-B403-D0CFB1702D13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1E03E9F-12A7-4CD3-B403-D0CFB1702D13}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57239099-666A-4662-8334-E36424189F9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57239099-666A-4662-8334-E36424189F9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57239099-666A-4662-8334-E36424189F9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57239099-666A-4662-8334-E36424189F9A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
