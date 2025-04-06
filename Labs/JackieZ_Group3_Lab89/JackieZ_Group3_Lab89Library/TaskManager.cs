@@ -31,16 +31,17 @@ namespace JackieZ_Group3_Lab89Library
         {
             FileStream fileStream;
             StreamReader streamReader;
-            try
-            {
+            //try
+            //{
                 fileStream = new FileStream(path, FileMode.Open, FileAccess.Read);
                 streamReader = new StreamReader(fileStream);
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Error saving tasks: {ex.Message}");
-                return;
-            }
+            //}
+            //catch (Exception ex)
+            //{
+
+            //    Console.WriteLine($"Error saving tasks: {ex.Message}");
+            //    return;
+            //}
             JsonSerializer jsonSerializer = JsonSerializer.Create(new JsonSerializerSettings() { Formatting = Formatting.Indented });
             tasks = jsonSerializer.Deserialize(streamReader, typeof(List<Task>)) as List<Task>;
             fileStream.Close();
@@ -51,16 +52,16 @@ namespace JackieZ_Group3_Lab89Library
         {
             FileStream fileWriter;
             StreamWriter streamWriter;
-            try
-            {
+            //try
+            //{
                 fileWriter = new FileStream(path, FileMode.Create, FileAccess.Write);
                 streamWriter = new StreamWriter(fileWriter);
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Error saving tasks: {ex.Message}");
-                return;
-            }
+            //}
+            //catch (Exception ex)
+            //{
+            //    Console.WriteLine($"Error saving tasks: {ex.Message}");
+            //    return;
+            //}
             JsonSerializer jsonSerializer = JsonSerializer.Create(new JsonSerializerSettings() { Formatting = Formatting.Indented });
             jsonSerializer.Serialize(streamWriter, tasks);
             streamWriter.Close();

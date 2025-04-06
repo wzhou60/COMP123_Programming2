@@ -28,64 +28,144 @@
         /// </summary>
         private void InitializeComponent()
         {
-            listBox1 = new ListBox();
-            button1 = new Button();
-            button2 = new Button();
-            dateTimePicker1 = new DateTimePicker();
+            lbx_TaskList = new ListBox();
+            btn_TaskAdd = new Button();
+            btn_TaskEdit = new Button();
+            btn_TaskExit = new Button();
+            txt_TaskDescription = new TextBox();
+            chkbx_TaskDone = new CheckBox();
+            lbl_Date = new Label();
+            label1 = new Label();
+            btn_DeleteTask = new Button();
+            txt_DueDate = new TextBox();
             SuspendLayout();
             // 
-            // listBox1
+            // lbx_TaskList
             // 
-            listBox1.FormattingEnabled = true;
-            listBox1.Location = new Point(198, 69);
-            listBox1.Name = "listBox1";
-            listBox1.Size = new Size(150, 104);
-            listBox1.TabIndex = 0;
+            lbx_TaskList.FormattingEnabled = true;
+            lbx_TaskList.Location = new Point(325, 79);
+            lbx_TaskList.Name = "lbx_TaskList";
+            lbx_TaskList.Size = new Size(444, 124);
+            lbx_TaskList.TabIndex = 0;
+            lbx_TaskList.SelectedIndexChanged += lbx_TaskList_SelectedIndexChanged;
             // 
-            // button1
+            // btn_TaskAdd
             // 
-            button1.Location = new Point(53, 69);
-            button1.Name = "button1";
-            button1.Size = new Size(94, 29);
-            button1.TabIndex = 1;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
+            btn_TaskAdd.Location = new Point(119, 260);
+            btn_TaskAdd.Name = "btn_TaskAdd";
+            btn_TaskAdd.Size = new Size(94, 30);
+            btn_TaskAdd.TabIndex = 1;
+            btn_TaskAdd.Text = "Add Task";
+            btn_TaskAdd.UseVisualStyleBackColor = true;
+            btn_TaskAdd.Click += btn_TaskAdd_Click;
             // 
-            // button2
+            // btn_TaskEdit
             // 
-            button2.Location = new Point(53, 147);
-            button2.Name = "button2";
-            button2.Size = new Size(94, 29);
-            button2.TabIndex = 2;
-            button2.Text = "button2";
-            button2.UseVisualStyleBackColor = true;
+            btn_TaskEdit.Enabled = false;
+            btn_TaskEdit.Location = new Point(325, 214);
+            btn_TaskEdit.Name = "btn_TaskEdit";
+            btn_TaskEdit.Size = new Size(94, 29);
+            btn_TaskEdit.TabIndex = 2;
+            btn_TaskEdit.Text = "Edit Task";
+            btn_TaskEdit.UseVisualStyleBackColor = true;
+            btn_TaskEdit.Click += btn_TaskEdit_Click;
             // 
-            // dateTimePicker1
+            // btn_TaskExit
             // 
-            dateTimePicker1.Location = new Point(192, 269);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(250, 27);
-            dateTimePicker1.TabIndex = 3;
+            btn_TaskExit.Location = new Point(694, 409);
+            btn_TaskExit.Name = "btn_TaskExit";
+            btn_TaskExit.Size = new Size(94, 29);
+            btn_TaskExit.TabIndex = 4;
+            btn_TaskExit.Text = "Exit";
+            btn_TaskExit.UseVisualStyleBackColor = true;
+            btn_TaskExit.Click += btn_TaskExit_Click;
+            // 
+            // txt_TaskDescription
+            // 
+            txt_TaskDescription.Location = new Point(53, 144);
+            txt_TaskDescription.Multiline = true;
+            txt_TaskDescription.Name = "txt_TaskDescription";
+            txt_TaskDescription.PlaceholderText = "Enter the task description";
+            txt_TaskDescription.Size = new Size(250, 65);
+            txt_TaskDescription.TabIndex = 5;
+            // 
+            // chkbx_TaskDone
+            // 
+            chkbx_TaskDone.AutoSize = true;
+            chkbx_TaskDone.Location = new Point(120, 214);
+            chkbx_TaskDone.Name = "chkbx_TaskDone";
+            chkbx_TaskDone.Size = new Size(88, 24);
+            chkbx_TaskDone.TabIndex = 6;
+            chkbx_TaskDone.Text = "Is Done?";
+            chkbx_TaskDone.UseVisualStyleBackColor = true;
+            // 
+            // lbl_Date
+            // 
+            lbl_Date.AutoSize = true;
+            lbl_Date.Location = new Point(53, 56);
+            lbl_Date.Name = "lbl_Date";
+            lbl_Date.Size = new Size(125, 20);
+            lbl_Date.TabIndex = 7;
+            lbl_Date.Text = "Enter a Due Date:";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(53, 121);
+            label1.Name = "label1";
+            label1.Size = new Size(169, 20);
+            label1.TabIndex = 8;
+            label1.Text = "Enter a Task Description:";
+            // 
+            // btn_DeleteTask
+            // 
+            btn_DeleteTask.Location = new Point(675, 211);
+            btn_DeleteTask.Name = "btn_DeleteTask";
+            btn_DeleteTask.Size = new Size(94, 29);
+            btn_DeleteTask.TabIndex = 9;
+            btn_DeleteTask.Text = "Delete Task";
+            btn_DeleteTask.UseVisualStyleBackColor = true;
+            btn_DeleteTask.Click += btn_DeleteTask_Click;
+            // 
+            // txt_DueDate
+            // 
+            txt_DueDate.Location = new Point(53, 79);
+            txt_DueDate.Name = "txt_DueDate";
+            txt_DueDate.Size = new Size(250, 27);
+            txt_DueDate.TabIndex = 17;
             // 
             // TaskManagerForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(dateTimePicker1);
-            Controls.Add(button2);
-            Controls.Add(button1);
-            Controls.Add(listBox1);
+            Controls.Add(txt_DueDate);
+            Controls.Add(btn_DeleteTask);
+            Controls.Add(label1);
+            Controls.Add(lbl_Date);
+            Controls.Add(chkbx_TaskDone);
+            Controls.Add(txt_TaskDescription);
+            Controls.Add(btn_TaskExit);
+            Controls.Add(btn_TaskEdit);
+            Controls.Add(btn_TaskAdd);
+            Controls.Add(lbx_TaskList);
             Name = "TaskManagerForm";
             Text = "TaskManagerForm";
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
-        private ListBox listBox1;
-        private Button button1;
-        private Button button2;
-        private DateTimePicker dateTimePicker1;
+        private ListBox lbx_TaskList;
+        private Button btn_TaskAdd;
+        private Button btn_TaskEdit;
+        private Button btn_TaskExit;
+        private TextBox txt_TaskDescription;
+        private CheckBox chkbx_TaskDone;
+        private Label lbl_Date;
+        private Label label1;
+        private Button btn_DeleteTask;
+        private TextBox txt_DueDate;
     }
 }

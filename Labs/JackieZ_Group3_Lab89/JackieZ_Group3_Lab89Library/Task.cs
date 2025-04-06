@@ -40,7 +40,7 @@ namespace JackieZ_Group3_Lab89Library
                 dueDateString = "";
             }
             else
-            { dueDateString = $" Due: {DueDate}"; }
+            { dueDateString = $"- Due: {DueDate}"; }
 
             string doneString = "";
             if (IsDone)
@@ -48,7 +48,7 @@ namespace JackieZ_Group3_Lab89Library
             else
             { doneString = "Not Done"; }
 
-            return $"Task: {Description}{dueDateString} - {doneString}";
+            return $"Task: {Description} {dueDateString} - {doneString}";
         }
     }
 }
