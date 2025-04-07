@@ -18,6 +18,11 @@ namespace JackieZ_Group3_Lab89
             new TaskManagerForm(taskManager).Show();
         }
 
+        private void btn_Course_Click(object sender, EventArgs e)
+        {
+            new CourseManagerForm(courseManager).Show();
+        }
+
         private void btn_TaskJSONExport_Click(object sender, EventArgs e)
         {
             try
@@ -45,5 +50,7 @@ namespace JackieZ_Group3_Lab89
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+       
     }
 }

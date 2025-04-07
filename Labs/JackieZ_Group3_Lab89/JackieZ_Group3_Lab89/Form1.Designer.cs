@@ -38,6 +38,7 @@
             btn_EvalJSONImport = new Button();
             btn_EvalJSONExport = new Button();
             lbl_TaskIOStatus = new Label();
+            lbl_Title = new Label();
             SuspendLayout();
             // 
             // btn_Tasks
@@ -58,6 +59,7 @@
             btn_Course.TabIndex = 1;
             btn_Course.Text = "Courses";
             btn_Course.UseVisualStyleBackColor = true;
+            btn_Course.Click += btn_Course_Click;
             // 
             // btn_Evaluation
             // 
@@ -135,11 +137,22 @@
             lbl_TaskIOStatus.TextAlign = ContentAlignment.MiddleCenter;
             lbl_TaskIOStatus.Visible = false;
             // 
+            // lbl_Title
+            // 
+            lbl_Title.AutoSize = true;
+            lbl_Title.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lbl_Title.Location = new Point(262, 57);
+            lbl_Title.Name = "lbl_Title";
+            lbl_Title.Size = new Size(544, 31);
+            lbl_Title.TabIndex = 10;
+            lbl_Title.Text = "Welcome to the School Task Management System";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1052, 567);
+            Controls.Add(lbl_Title);
             Controls.Add(lbl_TaskIOStatus);
             Controls.Add(btn_EvalJSONImport);
             Controls.Add(btn_EvalJSONExport);
@@ -168,5 +181,6 @@
         private Button btn_EvalJSONImport;
         private Button btn_EvalJSONExport;
         private Label lbl_TaskIOStatus;
+        private Label lbl_Title;
     }
 }

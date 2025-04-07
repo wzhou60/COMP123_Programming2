@@ -120,7 +120,7 @@
             Controls.Add(txt_TaskDescription);
             Controls.Add(btn_OK);
             Name = "TaskEditor";
-            Text = "TaskEditor";
+            Text = "Edit Task";
             Load += TaskEditor_Load;
             ResumeLayout(false);
             PerformLayout();

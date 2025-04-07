@@ -35,7 +35,7 @@
             txt_TaskDescription = new TextBox();
             chkbx_TaskDone = new CheckBox();
             lbl_Date = new Label();
-            label1 = new Label();
+            lbl_TaskDescription = new Label();
             btn_DeleteTask = new Button();
             txt_DueDate = new TextBox();
             SuspendLayout();
@@ -108,14 +108,14 @@
             lbl_Date.TabIndex = 7;
             lbl_Date.Text = "Enter a Due Date:";
             // 
-            // label1
+            // lbl_TaskDescription
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(53, 121);
-            label1.Name = "label1";
-            label1.Size = new Size(169, 20);
-            label1.TabIndex = 8;
-            label1.Text = "Enter a Task Description:";
+            lbl_TaskDescription.AutoSize = true;
+            lbl_TaskDescription.Location = new Point(53, 121);
+            lbl_TaskDescription.Name = "lbl_TaskDescription";
+            lbl_TaskDescription.Size = new Size(169, 20);
+            lbl_TaskDescription.TabIndex = 8;
+            lbl_TaskDescription.Text = "Enter a Task Description:";
             // 
             // btn_DeleteTask
             // 
@@ -141,7 +141,7 @@
             ClientSize = new Size(800, 450);
             Controls.Add(txt_DueDate);
             Controls.Add(btn_DeleteTask);
-            Controls.Add(label1);
+            Controls.Add(lbl_TaskDescription);
             Controls.Add(lbl_Date);
             Controls.Add(chkbx_TaskDone);
             Controls.Add(txt_TaskDescription);
@@ -164,7 +164,7 @@
         private TextBox txt_TaskDescription;
         private CheckBox chkbx_TaskDone;
         private Label lbl_Date;
-        private Label label1;
+        private Label lbl_TaskDescription;
         private Button btn_DeleteTask;
         private TextBox txt_DueDate;
     }

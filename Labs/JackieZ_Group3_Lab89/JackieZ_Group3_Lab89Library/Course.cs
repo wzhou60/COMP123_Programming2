@@ -1,8 +1,6 @@
-﻿ 
+﻿using System.Text.Json.Serialization;
 
-using System.Text.Json.Serialization;
-
-namespace JackieZ_Group3_Lab89Library 
+namespace JackieZ_Group3_Lab89Library
 {
     public class Course
     {
@@ -141,7 +139,7 @@ namespace JackieZ_Group3_Lab89Library
             {
                 result += $" \n\t{evaluation}";
             }
-            return $"Course Code: {code} \nEvaluations: {result} \nTotal Grade: {Grade} \n";
+            return $"ID: {id}, Course Code: {code}, \nName: {name}, \nEvaluations: {result}, \nTotal Grade: {Grade} \n";
         }
     }
 }

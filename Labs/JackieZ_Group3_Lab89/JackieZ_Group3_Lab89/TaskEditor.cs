@@ -36,20 +36,18 @@ namespace JackieZ_Group3_Lab89
 
         private void btn_OK_Click(object sender, EventArgs e)
         {
-            DialogResult = DialogResult.OK;
-
             try
             {
                 taskToEdit.Description = txt_TaskDescription.Text;
                 taskToEdit.DueDate = DateTime.Parse(txt_DueDate.Text);
                 taskToEdit.IsDone = chkbx_TaskDone.Checked;
+                DialogResult = DialogResult.OK;
+                this.Close();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-            this.Close();
         }
     }
 }

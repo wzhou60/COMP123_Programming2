@@ -19,19 +19,16 @@ namespace JackieZ_Group3_Lab89
 
         private void btn_TaskAdd_Click(object sender, EventArgs e)
         {
-            string description = "";
-
             try
             {
-                description = txt_TaskDescription.Text;
-                Task newTask = taskManager.CreateTask(description);
-                //newTask.DueDate = dtp_TaskDate.Value;
+                Task newTask = taskManager.CreateTask(txt_TaskDescription.Text);
+
                 if (txt_DueDate.Text == null || txt_DueDate.Text == "")
                 {
                 }
                 else
                 {
-                    newTask.DueDate = DateTime.Parse(txt_DueDate.Text);
+                    newTask.DueDate = Convert.ToDateTime(txt_DueDate.Text);
                 }
                 newTask.IsDone = chkbx_TaskDone.Checked;
             }
@@ -40,11 +37,7 @@ namespace JackieZ_Group3_Lab89
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            lbx_TaskList.Items.Clear();
-            foreach (Task task in taskManager.Tasks)
-            {
-                lbx_TaskList.Items.Add(task);
-            }
+            RefreshTaskList();
 
             txt_TaskDescription.Text = "";
             txt_DueDate.Text = "";
@@ -57,9 +50,6 @@ namespace JackieZ_Group3_Lab89
 
             if (currentlySelectedTask != null)
             {
-                //txt_Id.Text = currentlySelectedTask.Description;
-                //txtName.Text = currentlySelectedTask.Name;
-                //txtYob.Text = currentlySelectedTask.YOB.ToString();
                 btn_TaskEdit.Enabled = true;
             }
             else
