@@ -43,6 +43,7 @@
             // lbx_TaskList
             // 
             lbx_TaskList.FormattingEnabled = true;
+            lbx_TaskList.HorizontalScrollbar = true;
             lbx_TaskList.Location = new Point(325, 79);
             lbx_TaskList.Name = "lbx_TaskList";
             lbx_TaskList.Size = new Size(444, 124);

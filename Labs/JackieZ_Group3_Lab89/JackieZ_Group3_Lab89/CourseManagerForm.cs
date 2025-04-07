@@ -85,5 +85,10 @@ namespace JackieZ_Group3_Lab89
         private void btn_ViewEvals_Click(object sender, EventArgs e)
         {
         }
+
+        private void CourseManagerForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

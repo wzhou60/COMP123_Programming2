@@ -107,6 +107,7 @@
             // lbx_CourseList
             // 
             lbx_CourseList.FormattingEnabled = true;
+            lbx_CourseList.HorizontalScrollbar = true;
             lbx_CourseList.Location = new Point(317, 74);
             lbx_CourseList.Name = "lbx_CourseList";
             lbx_CourseList.Size = new Size(444, 124);
@@ -158,6 +159,7 @@
             Controls.Add(lbx_CourseList);
             Name = "CourseManagerForm";
             Text = "CourseManagerForm";
+            Load += CourseManagerForm_Load;
             ResumeLayout(false);
             PerformLayout();
         }

@@ -98,6 +98,7 @@
             // lbx_EvalList
             // 
             lbx_EvalList.FormattingEnabled = true;
+            lbx_EvalList.HorizontalScrollbar = true;
             lbx_EvalList.Location = new Point(314, 131);
             lbx_EvalList.Name = "lbx_EvalList";
             lbx_EvalList.Size = new Size(444, 124);
