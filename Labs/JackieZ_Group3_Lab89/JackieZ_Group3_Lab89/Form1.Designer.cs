@@ -39,6 +39,7 @@
             btn_EvalJSONExport = new Button();
             lbl_TaskIOStatus = new Label();
             lbl_Title = new Label();
+            lbl_IOCourseStatus = new Label();
             SuspendLayout();
             // 
             // btn_Tasks
@@ -98,6 +99,7 @@
             btn_CoursesJSONImport.TabIndex = 6;
             btn_CoursesJSONImport.Text = "Import";
             btn_CoursesJSONImport.UseVisualStyleBackColor = true;
+            btn_CoursesJSONImport.Click += btn_CoursesJSONImport_Click;
             // 
             // btn_CoursesJSONExport
             // 
@@ -107,6 +109,7 @@
             btn_CoursesJSONExport.TabIndex = 5;
             btn_CoursesJSONExport.Text = "Export";
             btn_CoursesJSONExport.UseVisualStyleBackColor = true;
+            btn_CoursesJSONExport.Click += btn_CoursesJSONExport_Click;
             // 
             // btn_EvalJSONImport
             // 
@@ -147,11 +150,21 @@
             lbl_Title.TabIndex = 10;
             lbl_Title.Text = "Welcome to the School Task Management System";
             // 
+            // lbl_IOCourseStatus
+            // 
+            lbl_IOCourseStatus.AutoSize = true;
+            lbl_IOCourseStatus.Location = new Point(459, 338);
+            lbl_IOCourseStatus.Name = "lbl_IOCourseStatus";
+            lbl_IOCourseStatus.Size = new Size(125, 20);
+            lbl_IOCourseStatus.TabIndex = 11;
+            lbl_IOCourseStatus.Text = "Import Successful";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1052, 567);
+            Controls.Add(lbl_IOCourseStatus);
             Controls.Add(lbl_Title);
             Controls.Add(lbl_TaskIOStatus);
             Controls.Add(btn_EvalJSONImport);
@@ -182,5 +195,6 @@
         private Button btn_EvalJSONExport;
         private Label lbl_TaskIOStatus;
         private Label lbl_Title;
+        private Label lbl_IOCourseStatus;
     }
 }

@@ -51,6 +51,32 @@ namespace JackieZ_Group3_Lab89
             }
         }
 
-       
+        private void btn_CoursesJSONExport_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                courseManager.Save("Courses.json");
+                lbl_IOCourseStatus.Text = "Export Successful!";
+                lbl_IOCourseStatus.Visible = true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btn_CoursesJSONImport_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                courseManager.Load("Courses.json");
+                lbl_IOCourseStatus.Text = "Import Successful!";
+                lbl_IOCourseStatus.Visible = true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

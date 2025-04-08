@@ -133,13 +133,13 @@ namespace JackieZ_Group3_Lab89Library
 
         public override string ToString()
         {
-            string result = "";
+            //string result = "";
 
-            foreach (Evaluation evaluation in evaluations)
-            {
-                result += $" \n\t{evaluation}";
-            }
-            return $"ID: {id}, Course Code: {code}, \nName: {name}, \nEvaluations: {result}, \nTotal Grade: {Grade} \n";
+            //foreach (Evaluation evaluation in evaluations)
+            //{
+            //    result += $" {evaluation}";
+            //}
+            return $"ID: {id}, Course Code: {code}, Name: {name}, Total Grade: {Grade} ";
         }
     }
 }

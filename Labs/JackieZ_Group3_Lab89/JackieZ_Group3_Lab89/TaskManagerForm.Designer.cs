@@ -38,6 +38,8 @@
             lbl_TaskDescription = new Label();
             btn_DeleteTask = new Button();
             txt_DueDate = new TextBox();
+            grp_AddTask = new GroupBox();
+            grp_AddTask.SuspendLayout();
             SuspendLayout();
             // 
             // lbx_TaskList
@@ -52,7 +54,7 @@
             // 
             // btn_TaskAdd
             // 
-            btn_TaskAdd.Location = new Point(119, 260);
+            btn_TaskAdd.Location = new Point(84, 252);
             btn_TaskAdd.Name = "btn_TaskAdd";
             btn_TaskAdd.Size = new Size(94, 30);
             btn_TaskAdd.TabIndex = 1;
@@ -83,7 +85,7 @@
             // 
             // txt_TaskDescription
             // 
-            txt_TaskDescription.Location = new Point(53, 144);
+            txt_TaskDescription.Location = new Point(18, 136);
             txt_TaskDescription.Multiline = true;
             txt_TaskDescription.Name = "txt_TaskDescription";
             txt_TaskDescription.PlaceholderText = "Enter the task description";
@@ -93,7 +95,7 @@
             // chkbx_TaskDone
             // 
             chkbx_TaskDone.AutoSize = true;
-            chkbx_TaskDone.Location = new Point(120, 214);
+            chkbx_TaskDone.Location = new Point(85, 206);
             chkbx_TaskDone.Name = "chkbx_TaskDone";
             chkbx_TaskDone.Size = new Size(88, 24);
             chkbx_TaskDone.TabIndex = 6;
@@ -103,7 +105,7 @@
             // lbl_Date
             // 
             lbl_Date.AutoSize = true;
-            lbl_Date.Location = new Point(53, 56);
+            lbl_Date.Location = new Point(18, 48);
             lbl_Date.Name = "lbl_Date";
             lbl_Date.Size = new Size(125, 20);
             lbl_Date.TabIndex = 7;
@@ -112,7 +114,7 @@
             // lbl_TaskDescription
             // 
             lbl_TaskDescription.AutoSize = true;
-            lbl_TaskDescription.Location = new Point(53, 121);
+            lbl_TaskDescription.Location = new Point(18, 113);
             lbl_TaskDescription.Name = "lbl_TaskDescription";
             lbl_TaskDescription.Size = new Size(169, 20);
             lbl_TaskDescription.TabIndex = 8;
@@ -130,30 +132,41 @@
             // 
             // txt_DueDate
             // 
-            txt_DueDate.Location = new Point(53, 79);
+            txt_DueDate.Location = new Point(18, 71);
             txt_DueDate.Name = "txt_DueDate";
             txt_DueDate.Size = new Size(250, 27);
             txt_DueDate.TabIndex = 17;
+            // 
+            // grp_AddTask
+            // 
+            grp_AddTask.Controls.Add(txt_DueDate);
+            grp_AddTask.Controls.Add(lbl_Date);
+            grp_AddTask.Controls.Add(btn_TaskAdd);
+            grp_AddTask.Controls.Add(lbl_TaskDescription);
+            grp_AddTask.Controls.Add(txt_TaskDescription);
+            grp_AddTask.Controls.Add(chkbx_TaskDone);
+            grp_AddTask.Location = new Point(19, 39);
+            grp_AddTask.Name = "grp_AddTask";
+            grp_AddTask.Size = new Size(289, 307);
+            grp_AddTask.TabIndex = 18;
+            grp_AddTask.TabStop = false;
+            grp_AddTask.Text = "Create a Task";
             // 
             // TaskManagerForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(txt_DueDate);
             Controls.Add(btn_DeleteTask);
-            Controls.Add(lbl_TaskDescription);
-            Controls.Add(lbl_Date);
-            Controls.Add(chkbx_TaskDone);
-            Controls.Add(txt_TaskDescription);
             Controls.Add(btn_TaskExit);
             Controls.Add(btn_TaskEdit);
-            Controls.Add(btn_TaskAdd);
             Controls.Add(lbx_TaskList);
+            Controls.Add(grp_AddTask);
             Name = "TaskManagerForm";
             Text = "TaskManagerForm";
+            grp_AddTask.ResumeLayout(false);
+            grp_AddTask.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -168,5 +181,6 @@
         private Label lbl_TaskDescription;
         private Button btn_DeleteTask;
         private TextBox txt_DueDate;
+        private GroupBox grp_AddTask;
     }
 }

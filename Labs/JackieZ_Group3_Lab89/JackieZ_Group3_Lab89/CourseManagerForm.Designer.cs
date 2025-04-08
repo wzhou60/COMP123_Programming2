@@ -39,18 +39,20 @@
             txt_CourseName = new TextBox();
             lbl_CourseName = new Label();
             btn_ViewEvals = new Button();
+            grp_AddCourse = new GroupBox();
+            grp_AddCourse.SuspendLayout();
             SuspendLayout();
             // 
             // txt_CourseID
             // 
-            txt_CourseID.Location = new Point(42, 131);
+            txt_CourseID.Location = new Point(16, 112);
             txt_CourseID.Name = "txt_CourseID";
             txt_CourseID.Size = new Size(250, 27);
             txt_CourseID.TabIndex = 26;
             // 
             // btn_DeleteCourse
             // 
-            btn_DeleteCourse.Location = new Point(651, 209);
+            btn_DeleteCourse.Location = new Point(657, 224);
             btn_DeleteCourse.Name = "btn_DeleteCourse";
             btn_DeleteCourse.Size = new Size(110, 29);
             btn_DeleteCourse.TabIndex = 25;
@@ -60,7 +62,7 @@
             // lbl_CourseCode
             // 
             lbl_CourseCode.AutoSize = true;
-            lbl_CourseCode.Location = new Point(42, 173);
+            lbl_CourseCode.Location = new Point(16, 154);
             lbl_CourseCode.Name = "lbl_CourseCode";
             lbl_CourseCode.Size = new Size(146, 20);
             lbl_CourseCode.TabIndex = 24;
@@ -69,7 +71,7 @@
             // lbl_CourseID
             // 
             lbl_CourseID.AutoSize = true;
-            lbl_CourseID.Location = new Point(42, 108);
+            lbl_CourseID.Location = new Point(16, 89);
             lbl_CourseID.Name = "lbl_CourseID";
             lbl_CourseID.Size = new Size(126, 20);
             lbl_CourseID.TabIndex = 23;
@@ -77,7 +79,7 @@
             // 
             // txt_CourseCode
             // 
-            txt_CourseCode.Location = new Point(42, 196);
+            txt_CourseCode.Location = new Point(16, 177);
             txt_CourseCode.Multiline = true;
             txt_CourseCode.Name = "txt_CourseCode";
             txt_CourseCode.Size = new Size(250, 29);
@@ -86,7 +88,7 @@
             // btn_CourseEdit
             // 
             btn_CourseEdit.Enabled = false;
-            btn_CourseEdit.Location = new Point(541, 209);
+            btn_CourseEdit.Location = new Point(547, 224);
             btn_CourseEdit.Name = "btn_CourseEdit";
             btn_CourseEdit.Size = new Size(94, 29);
             btn_CourseEdit.TabIndex = 20;
@@ -96,7 +98,7 @@
             // 
             // btn_CourseAdd
             // 
-            btn_CourseAdd.Location = new Point(120, 243);
+            btn_CourseAdd.Location = new Point(93, 224);
             btn_CourseAdd.Name = "btn_CourseAdd";
             btn_CourseAdd.Size = new Size(94, 30);
             btn_CourseAdd.TabIndex = 19;
@@ -108,7 +110,7 @@
             // 
             lbx_CourseList.FormattingEnabled = true;
             lbx_CourseList.HorizontalScrollbar = true;
-            lbx_CourseList.Location = new Point(317, 74);
+            lbx_CourseList.Location = new Point(323, 89);
             lbx_CourseList.Name = "lbx_CourseList";
             lbx_CourseList.Size = new Size(444, 124);
             lbx_CourseList.TabIndex = 18;
@@ -116,7 +118,7 @@
             // 
             // txt_CourseName
             // 
-            txt_CourseName.Location = new Point(42, 74);
+            txt_CourseName.Location = new Point(16, 55);
             txt_CourseName.Name = "txt_CourseName";
             txt_CourseName.Size = new Size(250, 27);
             txt_CourseName.TabIndex = 28;
@@ -124,7 +126,7 @@
             // lbl_CourseName
             // 
             lbl_CourseName.AutoSize = true;
-            lbl_CourseName.Location = new Point(42, 51);
+            lbl_CourseName.Location = new Point(16, 32);
             lbl_CourseName.Name = "lbl_CourseName";
             lbl_CourseName.Size = new Size(151, 20);
             lbl_CourseName.TabIndex = 27;
@@ -133,7 +135,7 @@
             // btn_ViewEvals
             // 
             btn_ViewEvals.Enabled = false;
-            btn_ViewEvals.Location = new Point(317, 209);
+            btn_ViewEvals.Location = new Point(323, 224);
             btn_ViewEvals.Name = "btn_ViewEvals";
             btn_ViewEvals.Size = new Size(128, 29);
             btn_ViewEvals.TabIndex = 29;
@@ -141,27 +143,37 @@
             btn_ViewEvals.UseVisualStyleBackColor = true;
             btn_ViewEvals.Click += btn_ViewEvals_Click;
             // 
+            // grp_AddCourse
+            // 
+            grp_AddCourse.Controls.Add(lbl_CourseName);
+            grp_AddCourse.Controls.Add(txt_CourseName);
+            grp_AddCourse.Controls.Add(btn_CourseAdd);
+            grp_AddCourse.Controls.Add(txt_CourseCode);
+            grp_AddCourse.Controls.Add(txt_CourseID);
+            grp_AddCourse.Controls.Add(lbl_CourseID);
+            grp_AddCourse.Controls.Add(lbl_CourseCode);
+            grp_AddCourse.Location = new Point(25, 51);
+            grp_AddCourse.Name = "grp_AddCourse";
+            grp_AddCourse.Size = new Size(282, 267);
+            grp_AddCourse.TabIndex = 30;
+            grp_AddCourse.TabStop = false;
+            grp_AddCourse.Text = "Create a Course";
+            // 
             // CourseManagerForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(btn_ViewEvals);
-            Controls.Add(txt_CourseName);
-            Controls.Add(lbl_CourseName);
-            Controls.Add(txt_CourseID);
             Controls.Add(btn_DeleteCourse);
-            Controls.Add(lbl_CourseCode);
-            Controls.Add(lbl_CourseID);
-            Controls.Add(txt_CourseCode);
             Controls.Add(btn_CourseEdit);
-            Controls.Add(btn_CourseAdd);
             Controls.Add(lbx_CourseList);
+            Controls.Add(grp_AddCourse);
             Name = "CourseManagerForm";
             Text = "CourseManagerForm";
-            Load += CourseManagerForm_Load;
+            grp_AddCourse.ResumeLayout(false);
+            grp_AddCourse.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -177,5 +189,6 @@
         private TextBox txt_CourseName;
         private Label lbl_CourseName;
         private Button btn_ViewEvals;
+        private GroupBox grp_AddCourse;
     }
 }
