@@ -78,7 +78,5 @@ namespace JackieZ_Group3_Lab89
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-       
     }
 }

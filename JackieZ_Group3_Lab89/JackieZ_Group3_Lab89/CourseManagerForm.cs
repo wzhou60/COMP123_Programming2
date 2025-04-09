@@ -36,10 +36,14 @@ namespace JackieZ_Group3_Lab89
                 Course newCourse = new Course(Convert.ToUInt32(txt_CourseID.Text), txt_CourseCode.Text)
                 { Name = txt_CourseName.Text };
 
-                if (newCourse != null)
-                {
-                    courseManager.AddCourse(newCourse);
-                }
+                //if (Convert.ToUInt32(txt_CourseID.Text) == null || txt_CourseID.Text == "" || Convert.ToUInt32(txt_CourseID.Text) <= 0)
+                //{
+                //}
+                //else
+                //{
+                //    newTask.DueDate = DateTime.Parse(txt_DueDate.Text);
+                //}
+                courseManager.AddCourse(newCourse);
             }
             catch (Exception ex)
             {
@@ -80,9 +84,7 @@ namespace JackieZ_Group3_Lab89
 
         private void btn_ViewEvals_Click(object sender, EventArgs e)
         {
-            new ViewEvaluationsForm(currentlySelectedCourse).Show();
+            new ViewEvaluationsForm( currentlySelectedCourse).Show();
         }
-
-       
     }
 }
