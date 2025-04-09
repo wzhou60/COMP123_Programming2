@@ -155,9 +155,9 @@ namespace JackieZ_Group3_Lab89Library
                 dueDateString = "No due date";
             }
             else
-            { dueDateString = $"{dueDate}"; }
+            { dueDateString = $"Due: {dueDate}"; }
 
-            return $"{name}:{type}:{weight}%:{dueDateString}, Grade: {grade}";
+            return $"Name:{name}, Type: {type}, Weight {weight}%, {dueDateString}, Grade: {grade}";
         }
     }
 }

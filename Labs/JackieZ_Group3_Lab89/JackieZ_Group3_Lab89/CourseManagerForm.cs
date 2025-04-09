@@ -36,14 +36,10 @@ namespace JackieZ_Group3_Lab89
                 Course newCourse = new Course(Convert.ToUInt32(txt_CourseID.Text), txt_CourseCode.Text)
                 { Name = txt_CourseName.Text };
 
-                //if (Convert.ToUInt32(txt_CourseID.Text) == null || txt_CourseID.Text == "" || Convert.ToUInt32(txt_CourseID.Text) <= 0)
-                //{
-                //}
-                //else
-                //{
-                //    newTask.DueDate = DateTime.Parse(txt_DueDate.Text);
-                //}
-                courseManager.AddCourse(newCourse);
+                if (newCourse != null)
+                {
+                    courseManager.AddCourse(newCourse);
+                }
             }
             catch (Exception ex)
             {

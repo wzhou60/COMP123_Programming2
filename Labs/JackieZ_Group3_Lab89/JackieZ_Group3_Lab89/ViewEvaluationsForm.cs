@@ -4,13 +4,12 @@ namespace JackieZ_Group3_Lab89
 {
     public partial class ViewEvaluationsForm : Form
     {
-        // private List<Evaluation> evaluationsList = new List<Evaluation>();
+        //Code by JackieZ - 301465524
         private Course currentCourse;
 
         public ViewEvaluationsForm(Course course)
         {
             currentCourse = course;
-            //            evaluationsList = evaluations;
             InitializeComponent();
             RefreshEvaluationsList();
         }
@@ -29,37 +28,69 @@ namespace JackieZ_Group3_Lab89
             Evaluation newEval;
             try
             {
-                if (cbx_EvalType.SelectedIndex == 0)
+                if (cbx_EvalType.SelectedIndex == -1)
+                {
+                    MessageBox.Show("Please select an Evaluation Type", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    newEval = null;
+                }
+                else if (cbx_EvalType.SelectedIndex == 0)
                 {
                     newEval = new Assignment(currentCourse, Convert.ToByte(txt_Weight.Text),
-                        Convert.ToDateTime(txt_DueDate.Text), cbx_GroupAssign.Checked);
+                        Convert.ToDateTime(txt_DueDate.Text), cbx_GroupAssign.Checked)
+                    { Name = txt_EvalName.Text, Grade = Convert.ToByte(txt_EvalGrade.Text) };
                 }
                 else if (cbx_EvalType.SelectedIndex == 1)
                 {
                     newEval = new Evaluation(currentCourse, EvaluationType.Test,
                     Convert.ToByte(txt_Weight.Text))
-                    { DueDate = Convert.ToDateTime(txt_DueDate.Text) };
+                    {
+                        DueDate = Convert.ToDateTime(txt_DueDate.Text),
+                        Name = txt_EvalName.Text,
+                        Grade = Convert.ToByte(txt_EvalGrade.Text)
+                    };
                 }
                 else if (cbx_EvalType.SelectedIndex == 2)
                 {
                     newEval = new Quiz(currentCourse, Convert.ToByte(txt_Weight.Text),
                         Convert.ToUInt32(txt_QuizQuestions.Text))
-                    { DueDate = Convert.ToDateTime(txt_DueDate.Text) };
+                    {
+                        DueDate = Convert.ToDateTime(txt_DueDate.Text),
+                        Name = txt_EvalName.Text,
+                        Grade = Convert.ToByte(txt_EvalGrade.Text)
+                    };
                 }
                 else if (cbx_EvalType.SelectedIndex == 3)
                 {
                     newEval = new Evaluation(currentCourse, EvaluationType.Discussion,
                     Convert.ToByte(txt_Weight.Text))
-                    { DueDate = Convert.ToDateTime(txt_DueDate.Text) };
+                    {
+                        DueDate = Convert.ToDateTime(txt_DueDate.Text),
+                        Name = txt_EvalName.Text,
+                        Grade = Convert.ToByte(txt_EvalGrade.Text)
+                    };
                 }
                 else
                 {
                     newEval = new Evaluation(currentCourse, EvaluationType.Project,
                     Convert.ToByte(txt_Weight.Text))
-                    { DueDate = Convert.ToDateTime(txt_DueDate.Text) };
+                    {
+                        DueDate = Convert.ToDateTime(txt_DueDate.Text),
+                        Name = txt_EvalName.Text,
+                        Grade = Convert.ToByte(txt_EvalGrade.Text)
+                    };
                 }
 
-                currentCourse.Evaluations.Add(newEval);
+                if (newEval != null)
+                {
+                    currentCourse.Evaluations.Add(newEval);
+                    txt_DueDate.Text = "";
+                    txt_Weight.Text = "";
+                    txt_QuizQuestions.Text = "";
+                    txt_EvalGrade.Text = "";
+                    txt_EvalName.Text = "";
+                    cbx_GroupAssign.Checked = false;
+                    cbx_EvalType.SelectedIndex = -1;
+                }
             }
             catch (Exception ex)
             {
@@ -67,15 +98,9 @@ namespace JackieZ_Group3_Lab89
             }
 
             RefreshEvaluationsList();
-
-            txt_DueDate.Text = "";
-            txt_Weight.Text = "";
-            txt_QuizQuestions.Text = "";
-            cbx_GroupAssign.Checked = false;
-            cbx_EvalType.SelectedIndex = 0;
         }
 
-        private void btn_DeleteTask_Click(object sender, EventArgs e)
+        private void btn_DeleteEval_Click(object sender, EventArgs e)
         {
             if (lbx_EvalList.SelectedItem != null)
             {
@@ -85,6 +110,46 @@ namespace JackieZ_Group3_Lab89
             else
             {
                 MessageBox.Show("Please select a task to delete.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void cbx_EvalType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbx_EvalType.SelectedIndex == 0)
+            {
+                cbx_GroupAssign.Enabled = true;
+                txt_QuizQuestions.Enabled = false;
+            }
+            else if (cbx_EvalType.SelectedIndex == 2)
+            {
+                txt_QuizQuestions.Enabled = true;
+                cbx_GroupAssign.Enabled = false;
+            }
+            else
+            {
+                txt_QuizQuestions.Enabled = false;
+                cbx_GroupAssign.Enabled = false;
+            }
+        }
+
+        private void btn_EvalEdit_Click(object sender, EventArgs e)
+        {
+            EvaluationEditor evaluationEditor = new EvaluationEditor(lbx_EvalList.SelectedItem as Evaluation);
+            if (evaluationEditor.ShowDialog() == DialogResult.OK)
+            {
+                RefreshEvaluationsList();
+            }
+        }
+
+        private void lbx_EvalList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (lbx_EvalList.SelectedItem != null)
+            {
+                btn_EvalEdit.Enabled = true;
+            }
+            else
+            {
+                btn_EvalEdit.Enabled = false;
             }
         }
     }

@@ -30,13 +30,10 @@
         {
             btn_Tasks = new Button();
             btn_Course = new Button();
-            btn_Evaluation = new Button();
             btn_TaskJSONExport = new Button();
             btn_TaskJSONImport = new Button();
             btn_CoursesJSONImport = new Button();
             btn_CoursesJSONExport = new Button();
-            btn_EvalJSONImport = new Button();
-            btn_EvalJSONExport = new Button();
             lbl_TaskIOStatus = new Label();
             lbl_Title = new Label();
             lbl_IOCourseStatus = new Label();
@@ -61,15 +58,6 @@
             btn_Course.Text = "Courses";
             btn_Course.UseVisualStyleBackColor = true;
             btn_Course.Click += btn_Course_Click;
-            // 
-            // btn_Evaluation
-            // 
-            btn_Evaluation.Location = new Point(731, 149);
-            btn_Evaluation.Name = "btn_Evaluation";
-            btn_Evaluation.Size = new Size(175, 58);
-            btn_Evaluation.TabIndex = 2;
-            btn_Evaluation.Text = "Evaluations";
-            btn_Evaluation.UseVisualStyleBackColor = true;
             // 
             // btn_TaskJSONExport
             // 
@@ -111,24 +99,6 @@
             btn_CoursesJSONExport.UseVisualStyleBackColor = true;
             btn_CoursesJSONExport.Click += btn_CoursesJSONExport_Click;
             // 
-            // btn_EvalJSONImport
-            // 
-            btn_EvalJSONImport.Location = new Point(772, 290);
-            btn_EvalJSONImport.Name = "btn_EvalJSONImport";
-            btn_EvalJSONImport.Size = new Size(100, 35);
-            btn_EvalJSONImport.TabIndex = 8;
-            btn_EvalJSONImport.Text = "Import";
-            btn_EvalJSONImport.UseVisualStyleBackColor = true;
-            // 
-            // btn_EvalJSONExport
-            // 
-            btn_EvalJSONExport.Location = new Point(772, 240);
-            btn_EvalJSONExport.Name = "btn_EvalJSONExport";
-            btn_EvalJSONExport.Size = new Size(100, 35);
-            btn_EvalJSONExport.TabIndex = 7;
-            btn_EvalJSONExport.Text = "Export";
-            btn_EvalJSONExport.UseVisualStyleBackColor = true;
-            // 
             // lbl_TaskIOStatus
             // 
             lbl_TaskIOStatus.AutoSize = true;
@@ -153,6 +123,7 @@
             // lbl_IOCourseStatus
             // 
             lbl_IOCourseStatus.AutoSize = true;
+            lbl_IOCourseStatus.Enabled = false;
             lbl_IOCourseStatus.Location = new Point(459, 338);
             lbl_IOCourseStatus.Name = "lbl_IOCourseStatus";
             lbl_IOCourseStatus.Size = new Size(125, 20);
@@ -167,13 +138,10 @@
             Controls.Add(lbl_IOCourseStatus);
             Controls.Add(lbl_Title);
             Controls.Add(lbl_TaskIOStatus);
-            Controls.Add(btn_EvalJSONImport);
-            Controls.Add(btn_EvalJSONExport);
             Controls.Add(btn_CoursesJSONImport);
             Controls.Add(btn_CoursesJSONExport);
             Controls.Add(btn_TaskJSONImport);
             Controls.Add(btn_TaskJSONExport);
-            Controls.Add(btn_Evaluation);
             Controls.Add(btn_Course);
             Controls.Add(btn_Tasks);
             Name = "Form1";
@@ -186,13 +154,10 @@
 
         private Button btn_Tasks;
         private Button btn_Course;
-        private Button btn_Evaluation;
         private Button btn_TaskJSONExport;
         private Button btn_TaskJSONImport;
         private Button btn_CoursesJSONImport;
         private Button btn_CoursesJSONExport;
-        private Button btn_EvalJSONImport;
-        private Button btn_EvalJSONExport;
         private Label lbl_TaskIOStatus;
         private Label lbl_Title;
         private Label lbl_IOCourseStatus;

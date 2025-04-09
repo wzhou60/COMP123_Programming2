@@ -1,6 +1,6 @@
 ﻿namespace JackieZ_Group3_Lab89
 {
-    partial class ViewEvaluationsForm
+    partial class EvaluationEditor
     {
         /// <summary>
         /// Required designer variable.
@@ -28,15 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            txt_DueDate = new TextBox();
-            btn_EvalTask = new Button();
-            lbl_Weight = new Label();
-            lbl_Date = new Label();
-            btn_EvalEdit = new Button();
-            btn_EvalAdd = new Button();
-            lbx_EvalList = new ListBox();
-            txt_Weight = new TextBox();
-            cbx_EvalType = new ComboBox();
             grp_AddEval = new GroupBox();
             txt_EvalGrade = new TextBox();
             lbl_EvalGrade = new Label();
@@ -46,93 +37,15 @@
             lbl_QuizQuestions = new Label();
             txt_QuizQuestions = new TextBox();
             lbl_EvalType = new Label();
+            cbx_EvalType = new ComboBox();
+            lbl_Date = new Label();
+            txt_Weight = new TextBox();
+            txt_DueDate = new TextBox();
+            lbl_Weight = new Label();
+            btn_OK = new Button();
+            btn_Cancel = new Button();
             grp_AddEval.SuspendLayout();
             SuspendLayout();
-            // 
-            // txt_DueDate
-            // 
-            txt_DueDate.Location = new Point(15, 161);
-            txt_DueDate.Name = "txt_DueDate";
-            txt_DueDate.Size = new Size(250, 27);
-            txt_DueDate.TabIndex = 26;
-            // 
-            // btn_EvalTask
-            // 
-            btn_EvalTask.Location = new Point(631, 251);
-            btn_EvalTask.Name = "btn_EvalTask";
-            btn_EvalTask.Size = new Size(134, 29);
-            btn_EvalTask.TabIndex = 25;
-            btn_EvalTask.Text = "Delete Evaluation";
-            btn_EvalTask.UseVisualStyleBackColor = true;
-            btn_EvalTask.Click += btn_DeleteEval_Click;
-            // 
-            // lbl_Weight
-            // 
-            lbl_Weight.AutoSize = true;
-            lbl_Weight.Location = new Point(15, 194);
-            lbl_Weight.Name = "lbl_Weight";
-            lbl_Weight.Size = new Size(109, 20);
-            lbl_Weight.TabIndex = 24;
-            lbl_Weight.Text = "Enter a Weight:";
-            // 
-            // lbl_Date
-            // 
-            lbl_Date.AutoSize = true;
-            lbl_Date.Location = new Point(15, 138);
-            lbl_Date.Name = "lbl_Date";
-            lbl_Date.Size = new Size(125, 20);
-            lbl_Date.TabIndex = 23;
-            lbl_Date.Text = "Enter a Due Date:";
-            // 
-            // btn_EvalEdit
-            // 
-            btn_EvalEdit.Enabled = false;
-            btn_EvalEdit.Location = new Point(321, 254);
-            btn_EvalEdit.Name = "btn_EvalEdit";
-            btn_EvalEdit.Size = new Size(117, 29);
-            btn_EvalEdit.TabIndex = 20;
-            btn_EvalEdit.Text = "Edit Evaluation";
-            btn_EvalEdit.UseVisualStyleBackColor = true;
-            btn_EvalEdit.Click += btn_EvalEdit_Click;
-            // 
-            // btn_EvalAdd
-            // 
-            btn_EvalAdd.Anchor = AnchorStyles.Bottom;
-            btn_EvalAdd.Location = new Point(76, 394);
-            btn_EvalAdd.Name = "btn_EvalAdd";
-            btn_EvalAdd.Size = new Size(123, 30);
-            btn_EvalAdd.TabIndex = 19;
-            btn_EvalAdd.Text = "Add Evaluation";
-            btn_EvalAdd.UseVisualStyleBackColor = true;
-            btn_EvalAdd.Click += btn_EvalAdd_Click;
-            // 
-            // lbx_EvalList
-            // 
-            lbx_EvalList.FormattingEnabled = true;
-            lbx_EvalList.HorizontalScrollbar = true;
-            lbx_EvalList.Location = new Point(321, 119);
-            lbx_EvalList.Name = "lbx_EvalList";
-            lbx_EvalList.Size = new Size(444, 124);
-            lbx_EvalList.TabIndex = 18;
-            lbx_EvalList.SelectedIndexChanged += lbx_EvalList_SelectedIndexChanged;
-            // 
-            // txt_Weight
-            // 
-            txt_Weight.Location = new Point(15, 218);
-            txt_Weight.Name = "txt_Weight";
-            txt_Weight.Size = new Size(250, 27);
-            txt_Weight.TabIndex = 27;
-            // 
-            // cbx_EvalType
-            // 
-            cbx_EvalType.DropDownStyle = ComboBoxStyle.DropDownList;
-            cbx_EvalType.FormattingEnabled = true;
-            cbx_EvalType.Items.AddRange(new object[] { "Assignment", "Test", "Quiz", "Discussion", "Project" });
-            cbx_EvalType.Location = new Point(16, 50);
-            cbx_EvalType.Name = "cbx_EvalType";
-            cbx_EvalType.Size = new Size(250, 28);
-            cbx_EvalType.TabIndex = 28;
-            cbx_EvalType.SelectedIndexChanged += cbx_EvalType_SelectedIndexChanged;
             // 
             // grp_AddEval
             // 
@@ -147,13 +60,12 @@
             grp_AddEval.Controls.Add(cbx_EvalType);
             grp_AddEval.Controls.Add(lbl_Date);
             grp_AddEval.Controls.Add(txt_Weight);
-            grp_AddEval.Controls.Add(btn_EvalAdd);
             grp_AddEval.Controls.Add(txt_DueDate);
             grp_AddEval.Controls.Add(lbl_Weight);
-            grp_AddEval.Location = new Point(16, 15);
+            grp_AddEval.Location = new Point(79, 24);
             grp_AddEval.Name = "grp_AddEval";
-            grp_AddEval.Size = new Size(280, 434);
-            grp_AddEval.TabIndex = 29;
+            grp_AddEval.Size = new Size(280, 396);
+            grp_AddEval.TabIndex = 30;
             grp_AddEval.TabStop = false;
             grp_AddEval.Text = "Create an Evaluation";
             // 
@@ -222,21 +134,86 @@
             lbl_EvalType.AutoSize = true;
             lbl_EvalType.Location = new Point(16, 27);
             lbl_EvalType.Name = "lbl_EvalType";
-            lbl_EvalType.Size = new Size(180, 20);
+            lbl_EvalType.Size = new Size(116, 20);
             lbl_EvalType.TabIndex = 29;
-            lbl_EvalType.Text = "Select an Evaluation Type:";
+            lbl_EvalType.Text = "Evaluation Type:";
             // 
-            // ViewEvaluationsForm
+            // cbx_EvalType
+            // 
+            cbx_EvalType.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbx_EvalType.Enabled = false;
+            cbx_EvalType.FormattingEnabled = true;
+            cbx_EvalType.Items.AddRange(new object[] { "Assignment", "Test", "Quiz", "Discussion", "Project" });
+            cbx_EvalType.Location = new Point(16, 50);
+            cbx_EvalType.Name = "cbx_EvalType";
+            cbx_EvalType.Size = new Size(250, 28);
+            cbx_EvalType.TabIndex = 28;
+            // 
+            // lbl_Date
+            // 
+            lbl_Date.AutoSize = true;
+            lbl_Date.Location = new Point(15, 138);
+            lbl_Date.Name = "lbl_Date";
+            lbl_Date.Size = new Size(125, 20);
+            lbl_Date.TabIndex = 23;
+            lbl_Date.Text = "Enter a Due Date:";
+            // 
+            // txt_Weight
+            // 
+            txt_Weight.Location = new Point(15, 218);
+            txt_Weight.Name = "txt_Weight";
+            txt_Weight.Size = new Size(250, 27);
+            txt_Weight.TabIndex = 27;
+            // 
+            // txt_DueDate
+            // 
+            txt_DueDate.Location = new Point(15, 161);
+            txt_DueDate.Name = "txt_DueDate";
+            txt_DueDate.Size = new Size(250, 27);
+            txt_DueDate.TabIndex = 26;
+            // 
+            // lbl_Weight
+            // 
+            lbl_Weight.AutoSize = true;
+            lbl_Weight.Location = new Point(15, 194);
+            lbl_Weight.Name = "lbl_Weight";
+            lbl_Weight.Size = new Size(109, 20);
+            lbl_Weight.TabIndex = 24;
+            lbl_Weight.Text = "Enter a Weight:";
+            // 
+            // btn_OK
+            // 
+            btn_OK.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btn_OK.Location = new Point(243, 460);
+            btn_OK.Name = "btn_OK";
+            btn_OK.Size = new Size(94, 29);
+            btn_OK.TabIndex = 31;
+            btn_OK.Text = "OK";
+            btn_OK.UseVisualStyleBackColor = true;
+            btn_OK.Click += btn_OK_Click;
+            // 
+            // btn_Cancel
+            // 
+            btn_Cancel.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btn_Cancel.Location = new Point(348, 460);
+            btn_Cancel.Name = "btn_Cancel";
+            btn_Cancel.Size = new Size(94, 29);
+            btn_Cancel.TabIndex = 32;
+            btn_Cancel.Text = "Cancel";
+            btn_Cancel.UseVisualStyleBackColor = true;
+            btn_Cancel.Click += btn_Cancel_Click;
+            // 
+            // EvaluationEditor
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(814, 478);
-            Controls.Add(btn_EvalTask);
-            Controls.Add(btn_EvalEdit);
-            Controls.Add(lbx_EvalList);
+            ClientSize = new Size(454, 501);
+            Controls.Add(btn_Cancel);
+            Controls.Add(btn_OK);
             Controls.Add(grp_AddEval);
-            Name = "ViewEvaluationsForm";
-            Text = "ViewEvaluationsForm";
+            Name = "EvaluationEditor";
+            Text = "EvaluationEditor";
+            Load += EvaluationEditor_Load;
             grp_AddEval.ResumeLayout(false);
             grp_AddEval.PerformLayout();
             ResumeLayout(false);
@@ -244,23 +221,21 @@
 
         #endregion
 
-        private TextBox txt_DueDate;
-        private Button btn_EvalTask;
-        private Label lbl_Weight;
-        private Label lbl_Date;
-        private Button btn_EvalEdit;
-        private Button btn_EvalAdd;
-        private ListBox lbx_EvalList;
-        private TextBox txt_Weight;
-        private ComboBox cbx_EvalType;
         private GroupBox grp_AddEval;
-        private Label lbl_EvalType;
-        private Label lbl_QuizQuestions;
-        private TextBox txt_QuizQuestions;
-        private CheckBox cbx_GroupAssign;
-        private Label lbl_EvalName;
-        private TextBox txt_EvalName;
         private TextBox txt_EvalGrade;
         private Label lbl_EvalGrade;
+        private Label lbl_EvalName;
+        private TextBox txt_EvalName;
+        private CheckBox cbx_GroupAssign;
+        private Label lbl_QuizQuestions;
+        private TextBox txt_QuizQuestions;
+        private Label lbl_EvalType;
+        private ComboBox cbx_EvalType;
+        private Label lbl_Date;
+        private TextBox txt_Weight;
+        private TextBox txt_DueDate;
+        private Label lbl_Weight;
+        private Button btn_OK;
+        private Button btn_Cancel;
     }
 }
