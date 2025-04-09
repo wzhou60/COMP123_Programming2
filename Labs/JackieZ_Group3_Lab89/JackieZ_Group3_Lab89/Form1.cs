@@ -6,6 +6,8 @@ namespace JackieZ_Group3_Lab89
     {
         public TaskManager taskManager = new TaskManager();
         public CourseManager courseManager = new CourseManager();
+        public MyDay myDay = MyDay.NewDay();
+
 
         public Form1()
         {
@@ -15,7 +17,7 @@ namespace JackieZ_Group3_Lab89
         //Code by JackieZ - 301465524
         private void btn_Tasks_Click(object sender, EventArgs e)
         {
-            new TaskManagerForm(taskManager).Show();
+            new TaskManagerForm(taskManager, myDay).Show();
         }
 
         private void btn_Course_Click(object sender, EventArgs e)

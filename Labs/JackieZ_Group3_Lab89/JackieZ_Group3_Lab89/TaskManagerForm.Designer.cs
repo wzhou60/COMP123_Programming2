@@ -37,14 +37,19 @@
             lbl_Date = new Label();
             lbl_TaskDescription = new Label();
             btn_DeleteTask = new Button();
-            txt_DueDate = new TextBox();
             grp_AddTask = new GroupBox();
+            txt_DueDate = new TextBox();
             pictureBox1 = new PictureBox();
             label1 = new Label();
-            panel1 = new Panel();
+            pnl_Title = new Panel();
             label2 = new Label();
+            lbx_MyDay = new ListBox();
+            panel1 = new Panel();
+            lbl_Title = new Label();
+            label3 = new Label();
             grp_AddTask.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            pnl_Title.SuspendLayout();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -82,8 +87,9 @@
             // 
             // btn_TaskExit
             // 
+            btn_TaskExit.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             btn_TaskExit.Font = new Font("Consolas", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btn_TaskExit.Location = new Point(764, 464);
+            btn_TaskExit.Location = new Point(1081, 491);
             btn_TaskExit.Name = "btn_TaskExit";
             btn_TaskExit.Size = new Size(94, 29);
             btn_TaskExit.TabIndex = 4;
@@ -130,6 +136,7 @@
             // 
             // btn_DeleteTask
             // 
+            btn_DeleteTask.Enabled = false;
             btn_DeleteTask.Font = new Font("Consolas", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btn_DeleteTask.Location = new Point(728, 410);
             btn_DeleteTask.Name = "btn_DeleteTask";
@@ -138,13 +145,6 @@
             btn_DeleteTask.Text = "Delete Task";
             btn_DeleteTask.UseVisualStyleBackColor = true;
             btn_DeleteTask.Click += btn_DeleteTask_Click;
-            // 
-            // txt_DueDate
-            // 
-            txt_DueDate.Location = new Point(18, 64);
-            txt_DueDate.Name = "txt_DueDate";
-            txt_DueDate.Size = new Size(250, 27);
-            txt_DueDate.TabIndex = 17;
             // 
             // grp_AddTask
             // 
@@ -162,6 +162,13 @@
             grp_AddTask.TabIndex = 18;
             grp_AddTask.TabStop = false;
             grp_AddTask.Text = "Create a Task";
+            // 
+            // txt_DueDate
+            // 
+            txt_DueDate.Location = new Point(18, 72);
+            txt_DueDate.Name = "txt_DueDate";
+            txt_DueDate.Size = new Size(250, 27);
+            txt_DueDate.TabIndex = 9;
             // 
             // pictureBox1
             // 
@@ -184,16 +191,16 @@
             label1.TabIndex = 20;
             label1.Text = "Task Manager";
             // 
-            // panel1
+            // pnl_Title
             // 
-            panel1.BackColor = Color.FromArgb(255, 255, 128);
-            panel1.Controls.Add(pictureBox1);
-            panel1.Controls.Add(label1);
-            panel1.Location = new Point(14, 16);
-            panel1.Margin = new Padding(3, 4, 3, 4);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(821, 133);
-            panel1.TabIndex = 21;
+            pnl_Title.BackColor = Color.FromArgb(255, 255, 128);
+            pnl_Title.Controls.Add(pictureBox1);
+            pnl_Title.Controls.Add(label1);
+            pnl_Title.Location = new Point(14, 16);
+            pnl_Title.Margin = new Padding(3, 4, 3, 4);
+            pnl_Title.Name = "pnl_Title";
+            pnl_Title.Size = new Size(821, 133);
+            pnl_Title.TabIndex = 21;
             // 
             // label2
             // 
@@ -205,14 +212,57 @@
             label2.TabIndex = 22;
             label2.Text = "Task Lists";
             // 
+            // lbx_MyDay
+            // 
+            lbx_MyDay.FormattingEnabled = true;
+            lbx_MyDay.HorizontalScrollbar = true;
+            lbx_MyDay.Location = new Point(867, 214);
+            lbx_MyDay.Name = "lbx_MyDay";
+            lbx_MyDay.Size = new Size(289, 244);
+            lbx_MyDay.TabIndex = 23;
+            lbx_MyDay.SelectedIndexChanged += lbx_MyDay_SelectedIndexChanged;
+            // 
+            // panel1
+            // 
+            panel1.BackColor = Color.FromArgb(255, 255, 128);
+            panel1.Controls.Add(lbl_Title);
+            panel1.Location = new Point(867, 16);
+            panel1.Margin = new Padding(3, 4, 3, 4);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(289, 133);
+            panel1.TabIndex = 24;
+            // 
+            // lbl_Title
+            // 
+            lbl_Title.AutoSize = true;
+            lbl_Title.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lbl_Title.Location = new Point(81, 41);
+            lbl_Title.Name = "lbl_Title";
+            lbl_Title.Size = new Size(141, 46);
+            lbl_Title.TabIndex = 20;
+            lbl_Title.Text = "My Day";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.Location = new Point(924, 167);
+            label3.Name = "label3";
+            label3.Size = new Size(190, 37);
+            label3.TabIndex = 25;
+            label3.Text = "Today's Tasks";
+            // 
             // TaskManagerForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.GradientInactiveCaption;
-            ClientSize = new Size(870, 505);
-            Controls.Add(label2);
+            ClientSize = new Size(1187, 532);
+            Controls.Add(label3);
             Controls.Add(panel1);
+            Controls.Add(lbx_MyDay);
+            Controls.Add(label2);
+            Controls.Add(pnl_Title);
             Controls.Add(btn_DeleteTask);
             Controls.Add(btn_TaskExit);
             Controls.Add(btn_TaskEdit);
@@ -223,6 +273,8 @@
             grp_AddTask.ResumeLayout(false);
             grp_AddTask.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            pnl_Title.ResumeLayout(false);
+            pnl_Title.PerformLayout();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);
@@ -240,11 +292,15 @@
         private Label lbl_Date;
         private Label lbl_TaskDescription;
         private Button btn_DeleteTask;
-        private TextBox txt_DueDate;
         private GroupBox grp_AddTask;
         private PictureBox pictureBox1;
         private Label label1;
-        private Panel panel1;
+        private Panel pnl_Title;
         private Label label2;
+        private ListBox lbx_MyDay;
+        private Panel panel1;
+        private Label lbl_Title;
+        private Label label3;
+        private TextBox txt_DueDate;
     }
 }

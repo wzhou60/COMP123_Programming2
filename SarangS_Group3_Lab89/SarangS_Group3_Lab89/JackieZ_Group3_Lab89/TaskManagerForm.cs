@@ -5,10 +5,9 @@ namespace JackieZ_Group3_Lab89
 {
     public partial class TaskManagerForm : Form
     {
-        //Code by JackieZ - 301465524
+        //private TaskManager taskManager = new TaskManager();
+        //private string filePath = "tasks.json";
         private TaskManager taskManager;
-
-        private Task currentlySelectedTask;
 
         public TaskManagerForm(TaskManager taskManager)
         {
@@ -19,17 +18,13 @@ namespace JackieZ_Group3_Lab89
 
         private void btn_TaskAdd_Click(object sender, EventArgs e)
         {
+            string description = "";
+
             try
             {
-                Task newTask = taskManager.CreateTask(txt_TaskDescription.Text);
-
-                if (txt_DueDate.Text == null || txt_DueDate.Text == "")
-                {
-                }
-                else
-                {
-                    newTask.DueDate = Convert.ToDateTime(txt_DueDate.Text);
-                }
+                description = txt_TaskDescription.Text;
+                Task newTask = taskManager.CreateTask(description);
+                newTask.DueDate = dtp_TaskDate.Value;
                 newTask.IsDone = chkbx_TaskDone.Checked;
             }
             catch (Exception ex)
@@ -37,46 +32,22 @@ namespace JackieZ_Group3_Lab89
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            RefreshTaskList();
-
-            txt_TaskDescription.Text = "";
-            txt_DueDate.Text = "";
-            chkbx_TaskDone.Checked = false;
-        }
-
-        private void lbx_TaskList_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            currentlySelectedTask = lbx_TaskList.SelectedItem as Task;
-
-            if (currentlySelectedTask != null)
+            lbx_TaskList.Items.Clear();
+            foreach (Task task in taskManager.Tasks)
             {
-                btn_TaskEdit.Enabled = true;
-            }
-            else
-            {
-                btn_TaskEdit.Enabled = false;
+                lbx_TaskList.Items.Add(task);
             }
         }
 
         private void btn_TaskEdit_Click(object sender, EventArgs e)
         {
-            if (currentlySelectedTask == null)
-            {
-                MessageBox.Show("Please select a task to edit.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            TaskEditor taskEditor = new TaskEditor(currentlySelectedTask);
-            if (taskEditor.ShowDialog() == DialogResult.OK)
-            {
-                RefreshTaskList();
-            }
+            new TaskEditor().Show();
         }
 
         private void btn_DeleteTask_Click(object sender, EventArgs e)
         {
             if (lbx_TaskList.SelectedItem != null)
             {
-                taskManager.Tasks.Remove(lbx_TaskList.SelectedItem as Task);
                 lbx_TaskList.Items.Remove(lbx_TaskList.SelectedItem);
             }
             else
@@ -98,6 +69,11 @@ namespace JackieZ_Group3_Lab89
             {
                 lbx_TaskList.Items.Add(task);
             }
+        }
+
+        private void lbx_TaskList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -1,6 +1,8 @@
-﻿using System.Text.Json.Serialization;
+﻿ 
 
-namespace JackieZ_Group3_Lab89Library
+using System.Text.Json.Serialization;
+
+namespace JackieZ_Group3_Lab89Library 
 {
     public class Course
     {
@@ -133,13 +135,13 @@ namespace JackieZ_Group3_Lab89Library
 
         public override string ToString()
         {
-            //string result = "";
+            string result = "";
 
-            //foreach (Evaluation evaluation in evaluations)
-            //{
-            //    result += $" {evaluation}";
-            //}
-            return $"ID: {id}, Course Code: {code}, Name: {name}, Total Grade: {Grade} ";
+            foreach (Evaluation evaluation in evaluations)
+            {
+                result += $" \n\t{evaluation}";
+            }
+            return $"Course Code: {code} \nEvaluations: {result} \nTotal Grade: {Grade} \n";
         }
     }
 }

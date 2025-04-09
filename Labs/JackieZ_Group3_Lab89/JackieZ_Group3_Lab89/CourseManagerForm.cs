@@ -83,6 +83,10 @@ namespace JackieZ_Group3_Lab89
             new ViewEvaluationsForm(currentlySelectedCourse).Show();
         }
 
-       
+        private void btn_Exit_Click(object sender, EventArgs e)
+        {
+            DialogResult = DialogResult.Cancel;
+            this.Close();
+        }
     }
 }

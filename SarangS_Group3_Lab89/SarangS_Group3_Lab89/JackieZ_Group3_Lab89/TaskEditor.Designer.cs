@@ -32,18 +32,19 @@
             lbl_Date = new Label();
             chkbx_TaskDone = new CheckBox();
             txt_TaskDescription = new TextBox();
-            btn_OK = new Button();
+            dtp_TaskDate = new DateTimePicker();
+            btn_EditedTask = new Button();
             btn_Cancel = new Button();
-            txt_DueDate = new TextBox();
             SuspendLayout();
             // 
             // label1
             // 
             label1.Anchor = AnchorStyles.Bottom;
             label1.AutoSize = true;
-            label1.Location = new Point(38, 114);
+            label1.Location = new Point(48, 142);
+            label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(169, 20);
+            label1.Size = new Size(203, 25);
             label1.TabIndex = 14;
             label1.Text = "Enter a Task Description:";
             // 
@@ -51,9 +52,10 @@
             // 
             lbl_Date.Anchor = AnchorStyles.Bottom;
             lbl_Date.AutoSize = true;
-            lbl_Date.Location = new Point(38, 49);
+            lbl_Date.Location = new Point(48, 61);
+            lbl_Date.Margin = new Padding(4, 0, 4, 0);
             lbl_Date.Name = "lbl_Date";
-            lbl_Date.Size = new Size(125, 20);
+            lbl_Date.Size = new Size(149, 25);
             lbl_Date.TabIndex = 13;
             lbl_Date.Text = "Enter a Due Date:";
             // 
@@ -61,9 +63,10 @@
             // 
             chkbx_TaskDone.Anchor = AnchorStyles.Bottom;
             chkbx_TaskDone.AutoSize = true;
-            chkbx_TaskDone.Location = new Point(105, 207);
+            chkbx_TaskDone.Location = new Point(131, 260);
+            chkbx_TaskDone.Margin = new Padding(4);
             chkbx_TaskDone.Name = "chkbx_TaskDone";
-            chkbx_TaskDone.Size = new Size(88, 24);
+            chkbx_TaskDone.Size = new Size(107, 29);
             chkbx_TaskDone.TabIndex = 12;
             chkbx_TaskDone.Text = "Is Done?";
             chkbx_TaskDone.UseVisualStyleBackColor = true;
@@ -71,57 +74,65 @@
             // txt_TaskDescription
             // 
             txt_TaskDescription.Anchor = AnchorStyles.Bottom;
-            txt_TaskDescription.Location = new Point(38, 137);
+            txt_TaskDescription.Location = new Point(48, 171);
+            txt_TaskDescription.Margin = new Padding(4);
             txt_TaskDescription.Multiline = true;
             txt_TaskDescription.Name = "txt_TaskDescription";
             txt_TaskDescription.PlaceholderText = "Enter the task description";
-            txt_TaskDescription.Size = new Size(250, 65);
+            txt_TaskDescription.Size = new Size(312, 80);
             txt_TaskDescription.TabIndex = 11;
             // 
-            // btn_OK
+            // dtp_TaskDate
             // 
-            btn_OK.Anchor = AnchorStyles.Bottom;
-            btn_OK.Location = new Point(119, 309);
-            btn_OK.Name = "btn_OK";
-            btn_OK.Size = new Size(94, 30);
-            btn_OK.TabIndex = 9;
-            btn_OK.Text = "OK";
-            btn_OK.UseVisualStyleBackColor = true;
-            btn_OK.Click += btn_OK_Click;
+            dtp_TaskDate.Anchor = AnchorStyles.Bottom;
+            dtp_TaskDate.CustomFormat = " ";
+            dtp_TaskDate.Format = DateTimePickerFormat.Custom;
+            dtp_TaskDate.Location = new Point(48, 90);
+            dtp_TaskDate.Margin = new Padding(4);
+            dtp_TaskDate.Name = "dtp_TaskDate";
+            dtp_TaskDate.Size = new Size(312, 31);
+            dtp_TaskDate.TabIndex = 10;
+            dtp_TaskDate.Value = new DateTime(2025, 4, 3, 13, 37, 59, 0);
+            dtp_TaskDate.ValueChanged += dtp_TaskDate_ValueChanged;
+            // 
+            // btn_EditedTask
+            // 
+            btn_EditedTask.Anchor = AnchorStyles.Bottom;
+            btn_EditedTask.Location = new Point(149, 386);
+            btn_EditedTask.Margin = new Padding(4);
+            btn_EditedTask.Name = "btn_EditedTask";
+            btn_EditedTask.Size = new Size(118, 38);
+            btn_EditedTask.TabIndex = 9;
+            btn_EditedTask.Text = "OK";
+            btn_EditedTask.UseVisualStyleBackColor = true;
+            btn_EditedTask.Click += btn_EditedTask_Click;
             // 
             // btn_Cancel
             // 
             btn_Cancel.Anchor = AnchorStyles.Bottom;
-            btn_Cancel.Location = new Point(219, 310);
+            btn_Cancel.Location = new Point(274, 388);
+            btn_Cancel.Margin = new Padding(4);
             btn_Cancel.Name = "btn_Cancel";
-            btn_Cancel.Size = new Size(94, 29);
+            btn_Cancel.Size = new Size(118, 36);
             btn_Cancel.TabIndex = 15;
             btn_Cancel.Text = "Cancel";
             btn_Cancel.UseVisualStyleBackColor = true;
-            btn_Cancel.Click += btn_Cancel_Click;
-            // 
-            // txt_DueDate
-            // 
-            txt_DueDate.Location = new Point(38, 72);
-            txt_DueDate.Name = "txt_DueDate";
-            txt_DueDate.Size = new Size(250, 27);
-            txt_DueDate.TabIndex = 16;
             // 
             // TaskEditor
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(325, 351);
-            Controls.Add(txt_DueDate);
+            ClientSize = new Size(406, 439);
             Controls.Add(btn_Cancel);
             Controls.Add(label1);
             Controls.Add(lbl_Date);
             Controls.Add(chkbx_TaskDone);
             Controls.Add(txt_TaskDescription);
-            Controls.Add(btn_OK);
+            Controls.Add(dtp_TaskDate);
+            Controls.Add(btn_EditedTask);
+            Margin = new Padding(4);
             Name = "TaskEditor";
-            Text = "Edit Task";
-            Load += TaskEditor_Load;
+            Text = "TaskEditor";
             ResumeLayout(false);
             PerformLayout();
         }
@@ -132,8 +143,8 @@
         private Label lbl_Date;
         private CheckBox chkbx_TaskDone;
         private TextBox txt_TaskDescription;
-        private Button btn_OK;
+        private DateTimePicker dtp_TaskDate;
+        private Button btn_EditedTask;
         private Button btn_Cancel;
-        private TextBox txt_DueDate;
     }
 }

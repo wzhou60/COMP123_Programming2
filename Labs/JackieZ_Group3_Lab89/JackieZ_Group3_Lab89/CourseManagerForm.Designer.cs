@@ -44,6 +44,7 @@
             pictureBox1 = new PictureBox();
             label1 = new Label();
             label2 = new Label();
+            btn_Exit = new Button();
             grp_AddCourse.SuspendLayout();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -59,7 +60,7 @@
             // btn_DeleteCourse
             // 
             btn_DeleteCourse.Font = new Font("Consolas", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btn_DeleteCourse.Location = new Point(699, 411);
+            btn_DeleteCourse.Location = new Point(703, 411);
             btn_DeleteCourse.Name = "btn_DeleteCourse";
             btn_DeleteCourse.Size = new Size(137, 29);
             btn_DeleteCourse.TabIndex = 25;
@@ -96,7 +97,7 @@
             // 
             btn_CourseEdit.Enabled = false;
             btn_CourseEdit.Font = new Font("Consolas", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btn_CourseEdit.Location = new Point(574, 411);
+            btn_CourseEdit.Location = new Point(578, 411);
             btn_CourseEdit.Name = "btn_CourseEdit";
             btn_CourseEdit.Size = new Size(119, 29);
             btn_CourseEdit.TabIndex = 20;
@@ -120,7 +121,7 @@
             lbx_CourseList.FormattingEnabled = true;
             lbx_CourseList.HorizontalScrollbar = true;
             lbx_CourseList.ItemHeight = 18;
-            lbx_CourseList.Location = new Point(342, 212);
+            lbx_CourseList.Location = new Point(346, 212);
             lbx_CourseList.Name = "lbx_CourseList";
             lbx_CourseList.Size = new Size(494, 184);
             lbx_CourseList.TabIndex = 18;
@@ -147,7 +148,7 @@
             btn_ViewEvals.Enabled = false;
             btn_ViewEvals.Font = new Font("Consolas", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btn_ViewEvals.ForeColor = Color.Black;
-            btn_ViewEvals.Location = new Point(342, 411);
+            btn_ViewEvals.Location = new Point(346, 411);
             btn_ViewEvals.Name = "btn_ViewEvals";
             btn_ViewEvals.Size = new Size(163, 29);
             btn_ViewEvals.TabIndex = 29;
@@ -209,11 +210,23 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(519, 161);
+            label2.Location = new Point(523, 161);
             label2.Name = "label2";
             label2.Size = new Size(157, 37);
             label2.TabIndex = 32;
             label2.Text = "Course List";
+            // 
+            // btn_Exit
+            // 
+            btn_Exit.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btn_Exit.Font = new Font("Consolas", 9.75F);
+            btn_Exit.Location = new Point(766, 490);
+            btn_Exit.Name = "btn_Exit";
+            btn_Exit.Size = new Size(94, 29);
+            btn_Exit.TabIndex = 33;
+            btn_Exit.Text = "Exit";
+            btn_Exit.UseVisualStyleBackColor = true;
+            btn_Exit.Click += btn_Exit_Click;
             // 
             // CourseManagerForm
             // 
@@ -221,6 +234,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.GradientInactiveCaption;
             ClientSize = new Size(873, 531);
+            Controls.Add(btn_Exit);
             Controls.Add(label2);
             Controls.Add(panel1);
             Controls.Add(btn_ViewEvals);
@@ -257,5 +271,6 @@
         private PictureBox pictureBox1;
         private Label label1;
         private Label label2;
+        private Button btn_Exit;
     }
 }

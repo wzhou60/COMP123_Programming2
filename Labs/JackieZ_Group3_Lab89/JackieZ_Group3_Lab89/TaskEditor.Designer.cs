@@ -111,6 +111,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.GradientInactiveCaption;
             ClientSize = new Size(325, 351);
             Controls.Add(txt_DueDate);
             Controls.Add(btn_Cancel);
