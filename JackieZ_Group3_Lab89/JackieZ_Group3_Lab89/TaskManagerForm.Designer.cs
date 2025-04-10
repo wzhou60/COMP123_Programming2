@@ -47,7 +47,6 @@
             panel1 = new Panel();
             lbl_Title = new Label();
             label3 = new Label();
-            checkedListBox1 = new CheckedListBox();
             grp_AddTask.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             pnl_Title.SuspendLayout();
@@ -58,7 +57,7 @@
             // 
             lbx_TaskList.FormattingEnabled = true;
             lbx_TaskList.HorizontalScrollbar = true;
-            lbx_TaskList.Location = new Point(334, 214);
+            lbx_TaskList.Location = new Point(333, 213);
             lbx_TaskList.Name = "lbx_TaskList";
             lbx_TaskList.Size = new Size(501, 184);
             lbx_TaskList.TabIndex = 0;
@@ -78,9 +77,9 @@
             // 
             btn_TaskEdit.Enabled = false;
             btn_TaskEdit.Font = new Font("Consolas", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btn_TaskEdit.Location = new Point(334, 410);
+            btn_TaskEdit.Location = new Point(333, 411);
             btn_TaskEdit.Name = "btn_TaskEdit";
-            btn_TaskEdit.Size = new Size(94, 29);
+            btn_TaskEdit.Size = new Size(104, 29);
             btn_TaskEdit.TabIndex = 2;
             btn_TaskEdit.Text = "Edit Task";
             btn_TaskEdit.UseVisualStyleBackColor = true;
@@ -90,7 +89,7 @@
             // 
             btn_TaskExit.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             btn_TaskExit.Font = new Font("Consolas", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btn_TaskExit.Location = new Point(1081, 491);
+            btn_TaskExit.Location = new Point(1250, 485);
             btn_TaskExit.Name = "btn_TaskExit";
             btn_TaskExit.Size = new Size(94, 29);
             btn_TaskExit.TabIndex = 4;
@@ -129,7 +128,7 @@
             // lbl_TaskDescription
             // 
             lbl_TaskDescription.AutoSize = true;
-            lbl_TaskDescription.Location = new Point(18, 106);
+            lbl_TaskDescription.Location = new Point(18, 107);
             lbl_TaskDescription.Name = "lbl_TaskDescription";
             lbl_TaskDescription.Size = new Size(234, 20);
             lbl_TaskDescription.TabIndex = 8;
@@ -139,9 +138,9 @@
             // 
             btn_DeleteTask.Enabled = false;
             btn_DeleteTask.Font = new Font("Consolas", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btn_DeleteTask.Location = new Point(728, 410);
+            btn_DeleteTask.Location = new Point(714, 411);
             btn_DeleteTask.Name = "btn_DeleteTask";
-            btn_DeleteTask.Size = new Size(107, 29);
+            btn_DeleteTask.Size = new Size(120, 29);
             btn_DeleteTask.TabIndex = 9;
             btn_DeleteTask.Text = "Delete Task";
             btn_DeleteTask.UseVisualStyleBackColor = true;
@@ -207,7 +206,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(524, 167);
+            label2.Location = new Point(522, 167);
             label2.Name = "label2";
             label2.Size = new Size(137, 37);
             label2.TabIndex = 22;
@@ -217,9 +216,9 @@
             // 
             lbx_MyDay.FormattingEnabled = true;
             lbx_MyDay.HorizontalScrollbar = true;
-            lbx_MyDay.Location = new Point(867, 214);
+            lbx_MyDay.Location = new Point(864, 213);
             lbx_MyDay.Name = "lbx_MyDay";
-            lbx_MyDay.Size = new Size(289, 244);
+            lbx_MyDay.Size = new Size(478, 184);
             lbx_MyDay.TabIndex = 23;
             lbx_MyDay.SelectedIndexChanged += lbx_MyDay_SelectedIndexChanged;
             // 
@@ -227,17 +226,17 @@
             // 
             panel1.BackColor = Color.FromArgb(255, 255, 128);
             panel1.Controls.Add(lbl_Title);
-            panel1.Location = new Point(867, 16);
+            panel1.Location = new Point(864, 16);
             panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(289, 133);
+            panel1.Size = new Size(479, 133);
             panel1.TabIndex = 24;
             // 
             // lbl_Title
             // 
             lbl_Title.AutoSize = true;
             lbl_Title.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lbl_Title.Location = new Point(81, 41);
+            lbl_Title.Location = new Point(179, 41);
             lbl_Title.Name = "lbl_Title";
             lbl_Title.Size = new Size(141, 46);
             lbl_Title.TabIndex = 20;
@@ -247,27 +246,18 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.Location = new Point(924, 167);
+            label3.Location = new Point(1026, 167);
             label3.Name = "label3";
             label3.Size = new Size(190, 37);
             label3.TabIndex = 25;
             label3.Text = "Today's Tasks";
-            // 
-            // checkedListBox1
-            // 
-            checkedListBox1.FormattingEnabled = true;
-            checkedListBox1.Location = new Point(511, 412);
-            checkedListBox1.Name = "checkedListBox1";
-            checkedListBox1.Size = new Size(150, 114);
-            checkedListBox1.TabIndex = 26;
             // 
             // TaskManagerForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.GradientInactiveCaption;
-            ClientSize = new Size(1187, 532);
-            Controls.Add(checkedListBox1);
+            ClientSize = new Size(1360, 529);
             Controls.Add(label3);
             Controls.Add(panel1);
             Controls.Add(lbx_MyDay);
@@ -312,6 +302,5 @@
         private Label lbl_Title;
         private Label label3;
         private TextBox txt_DueDate;
-        private CheckedListBox checkedListBox1;
     }
 }

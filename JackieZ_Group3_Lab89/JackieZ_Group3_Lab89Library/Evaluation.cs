@@ -1,7 +1,6 @@
-﻿ 
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 
-namespace JackieZ_Group3_Lab89Library 
+namespace JackieZ_Group3_Lab89Library
 {
     public class Evaluation
     {
@@ -19,6 +18,7 @@ namespace JackieZ_Group3_Lab89Library
         public Course Course
         {
             get { return course; }
+            set { course = value; }
         }
 
         public DateTime DueDate
@@ -155,9 +155,9 @@ namespace JackieZ_Group3_Lab89Library
                 dueDateString = "No due date";
             }
             else
-            { dueDateString = $"{dueDate}"; }
+            { dueDateString = $"Due: {dueDate}"; }
 
-            return $"{name}:{type}:{weight}%:{dueDateString}, Grade: {grade}";
+            return $"Name: {name}, Type: {type}, Weight {weight}%, {dueDateString}, Grade: {grade}%";
         }
     }
 }

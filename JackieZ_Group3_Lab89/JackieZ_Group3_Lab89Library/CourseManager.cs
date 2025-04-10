@@ -1,8 +1,6 @@
-﻿ 
+﻿using Newtonsoft.Json;
 
-using Newtonsoft.Json;
-
-namespace JackieZ_Group3_Lab89Library 
+namespace JackieZ_Group3_Lab89Library
 {
     public class CourseManager : IPersistable
     {
@@ -35,7 +33,7 @@ namespace JackieZ_Group3_Lab89Library
                 Console.WriteLine($"Error saving tasks: {ex.Message}");
                 return;
             }
-            JsonSerializer jsonSerializer = JsonSerializer.Create(new JsonSerializerSettings() { Formatting = Formatting.Indented });
+            JsonSerializer jsonSerializer = JsonSerializer.Create(new JsonSerializerSettings() { TypeNameHandling = TypeNameHandling.Auto, Formatting = Formatting.Indented });
             courses = jsonSerializer.Deserialize(streamReader, typeof(List<Course>)) as List<Course>;
             streamReader.Close();
             fileStream.Close();
@@ -60,7 +58,7 @@ namespace JackieZ_Group3_Lab89Library
                 Console.WriteLine($"Error saving tasks: {ex.Message}");
                 return;
             }
-            JsonSerializer jsonSerializer = JsonSerializer.Create(new JsonSerializerSettings() { Formatting = Formatting.Indented });
+            JsonSerializer jsonSerializer = JsonSerializer.Create(new JsonSerializerSettings() { TypeNameHandling = TypeNameHandling.Auto, Formatting = Formatting.Indented });
             jsonSerializer.Serialize(streamWriter, courses);
             streamWriter.Close();
             fileWriter.Close();
