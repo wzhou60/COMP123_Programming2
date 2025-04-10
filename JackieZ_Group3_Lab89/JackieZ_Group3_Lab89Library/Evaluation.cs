@@ -71,24 +71,24 @@ namespace JackieZ_Group3_Lab89Library
 
             set
             {
-                try
+                //try
+                //{
+                int currentTotalWeight = 0;
+                foreach (Evaluation e in course.Evaluations)
                 {
-                    int currentTotalWeight = 0;
-                    foreach (Evaluation e in course.Evaluations)
-                    {
-                        currentTotalWeight += e.Weight;
-                    }
-                    if (currentTotalWeight + value > 100)
-                    {
-                        throw new ArgumentException("Total evaluations weight exceeds 100%.");
-                    }
+                    currentTotalWeight += e.Weight;
+                }
+                if (currentTotalWeight + value > 100)
+                {
+                    throw new ArgumentException("Total evaluations weight exceeds 100%.");
+                }
 
-                    weight = value;
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine(ex.Message);
-                }
+                weight = value;
+                //}
+                //catch (Exception ex)
+                //{
+                //   // Console.WriteLine(ex.Message);
+                //}
             }
         }
 

@@ -60,12 +60,16 @@ namespace JackieZ_Group3_Lab89
                 }
                 else if (cbx_EvalType.SelectedIndex == 0)
                 {
+                    EvaluationErrorCheck();
+
                     newEval = new Assignment(currentCourse, Convert.ToByte(txt_Weight.Text),
                         Convert.ToDateTime(txt_DueDate.Text), cbx_GroupAssign.Checked)
                     { Name = txt_EvalName.Text, Grade = Convert.ToByte(txt_EvalGrade.Text) };
                 }
                 else if (cbx_EvalType.SelectedIndex == 1)
                 {
+                    EvaluationErrorCheck();
+
                     newEval = new Evaluation(currentCourse, EvaluationType.Test,
                     Convert.ToByte(txt_Weight.Text))
                     {
@@ -76,6 +80,7 @@ namespace JackieZ_Group3_Lab89
                 }
                 else if (cbx_EvalType.SelectedIndex == 2)
                 {
+                    EvaluationErrorCheck();
                     newEval = new Quiz(currentCourse, Convert.ToByte(txt_Weight.Text),
                         Convert.ToUInt32(txt_QuizQuestions.Text))
                     {
@@ -86,6 +91,8 @@ namespace JackieZ_Group3_Lab89
                 }
                 else if (cbx_EvalType.SelectedIndex == 3)
                 {
+                    EvaluationErrorCheck();
+
                     newEval = new Evaluation(currentCourse, EvaluationType.Discussion,
                     Convert.ToByte(txt_Weight.Text))
                     {
@@ -96,6 +103,8 @@ namespace JackieZ_Group3_Lab89
                 }
                 else
                 {
+                    EvaluationErrorCheck();
+
                     newEval = new Evaluation(currentCourse, EvaluationType.Project,
                     Convert.ToByte(txt_Weight.Text))
                     {
@@ -108,6 +117,7 @@ namespace JackieZ_Group3_Lab89
                 if (newEval != null)
                 {
                     currentCourse.Evaluations.Add(newEval);
+                    // currentCourse.AddEvaluation(newEval.Type,newEval.Weight,newEval.Name,newEval.DueDate);
                     txt_DueDate.Text = "";
                     txt_Weight.Text = "";
                     txt_QuizQuestions.Text = "";
@@ -123,6 +133,24 @@ namespace JackieZ_Group3_Lab89
             }
 
             RefreshEvaluationsList();
+        }
+
+        private void EvaluationErrorCheck()
+        {
+            if (Convert.ToDateTime(txt_DueDate.Text) < DateTime.Now)
+            {
+                throw new ArgumentException("Due date must be in the future.");
+            }
+
+            int currentTotalWeight = 0;
+            foreach (Evaluation eval in currentCourse.Evaluations)
+            {
+                currentTotalWeight += eval.Weight;
+            }
+            if (currentTotalWeight + Convert.ToByte(txt_Weight.Text) > 100)
+            {
+                throw new ArgumentException("Total evaluations weight exceeds 100%.");
+            }
         }
 
         private void btn_DeleteEval_Click(object sender, EventArgs e)

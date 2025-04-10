@@ -38,8 +38,36 @@ namespace JackieZ_Group3_Lab89
         {
             try
             {
+                if (txt_DueDate.Text == null || txt_DueDate.Text == "")
+                {
+                }
+                else
+                {
+                    if (Convert.ToDateTime(txt_DueDate.Text) < DateTime.Today)
+                    {
+                        throw new ArgumentException("The due date must be in the future.");
+                    }
+                    else if (Convert.ToDateTime(txt_DueDate.Text).Day == DateTime.Today.Day)
+                    {
+                        DateTime input = Convert.ToDateTime(txt_DueDate.Text);
+                        DateTime now = DateTime.Now;
+
+                        if (input.TimeOfDay > now.TimeOfDay)
+                        {
+                            taskToEdit.DueDate = input;
+                        }
+                        else
+                        {
+                            taskToEdit.DueDate = input.Date.AddHours(23).AddMinutes(59);
+                        }
+                    }
+                    else
+                    {
+                        taskToEdit.DueDate = Convert.ToDateTime(txt_DueDate.Text);
+                    }
+                }
+
                 taskToEdit.Description = txt_TaskDescription.Text;
-                taskToEdit.DueDate = DateTime.Parse(txt_DueDate.Text);
                 taskToEdit.IsDone = chkbx_TaskDone.Checked;
                 DialogResult = DialogResult.OK;
                 this.Close();

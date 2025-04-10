@@ -6,6 +6,7 @@ namespace JackieZ_Group3_Lab89
     public partial class TaskManagerForm : Form
     {
         //Code by JackieZ - 301465524
+        //MyDay code by Sarang S and Jackie Z
         private TaskManager taskManager;
 
         private MyDay myDay;
@@ -37,7 +38,7 @@ namespace JackieZ_Group3_Lab89
                     {
                         remove = false;
                         taskManager.Tasks.Remove(newTask);
-                        MessageBox.Show("The due date must be in the future.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        throw new Exception("The due date must be in the future.");
                     }
                     else if (Convert.ToDateTime(txt_DueDate.Text).Day == DateTime.Today.Day)
                     {
